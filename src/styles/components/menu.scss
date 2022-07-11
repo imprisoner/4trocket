@@ -1,0 +1,166 @@
+@layer components {
+  .menu {
+    @apply flex flex-col items-center w-full bg-neutral-10;
+
+
+    &__top {
+      @apply p-6;
+    }
+
+    .logo {
+      width: 200px;
+      height: 23px;
+    }
+
+    &__body {
+      @apply w-full pl-4 pt-3 pr-5 pb-6 gap-1 flex flex-col;
+    }
+  }
+
+  .menu-item {
+    @apply py-2.5 px-3 rounded bg-neutral-10 flex items-center gap-2 cursor-pointer outline-none;
+
+    &-secodary {
+      padding-right: 42px;
+    }
+
+    &__icon {
+      path {
+        @apply fill-neutral-700;
+      }
+    }
+
+    &__text {
+      @apply text-neutral-700 flex-1 text-m-md overflow-hidden;
+    }
+
+    /* states */
+
+    // hover
+    &:hover>&__text {
+      @apply text-blue-400;
+    }
+
+    // focused
+
+    &:focus {
+      @apply outline-3 outline-blue-50 outline-offset-0;
+    }
+
+    &:focus &__text {
+      @apply text-blue-400;
+    }
+
+    // active
+
+    &.active {
+      @apply bg-blue-400 outline-none;
+    }
+
+    &.active &__text {
+      @apply text-neutral-0;
+    }
+
+    &.active &__icon {
+      path {
+        @apply fill-neutral-0;
+      }
+    }
+
+    &.disabled &__icon {
+      svg path {
+        @apply fill-neutral-50;
+      }
+    }
+
+    &.disabled &__text {
+      @apply text-neutral-50;
+    }
+
+  }
+
+  .dropdown-item {
+    @apply relative;
+    // transition-duration: 2s;
+
+    &__inner-menu {
+      @apply absolute w-full left-0 flex-col gap-2 hidden;
+      top: calc(100% + 8px);
+    }
+
+    &__trigger.active {
+      @apply bg-neutral-10;
+    }
+
+    &__trigger.active .menu-item__icon {
+      svg path {
+        @apply fill-blue-400;
+      }
+    }
+
+    &__trigger.active .menu-item__text {
+      @apply text-neutral-700;
+    }
+
+    &__trigger.active .menu-item__caret {
+      transform: rotate(180deg);
+    }
+
+    &__inner-menu.expanded {
+      @apply flex;
+      -webkit-animation: menuFade 0.5s ease-out;
+      -moz-animation: menuFade 0.5s ease-out;
+      -o-animation: menuFade 0.5s ease-out;
+      animation: menuFade 0.5s ease-out;
+      
+    }
+
+    &.disabled &__trigger .menu-item__caret {
+      svg {
+        @apply fill-neutral-50;
+      }
+    }
+  }
+
+  // dropdown fade-in animation
+
+  @-webkit-keyframes menuFade {
+    0% {
+      @apply opacity-0;
+    }
+
+    100% {
+      @apply flex opacity-100;
+    }
+  }
+
+  @-moz-keyframes menuFade {
+    0% {
+      @apply opacity-0;
+    }
+
+    100% {
+      @apply flex opacity-100;
+    }
+  }
+
+  @-o-keyframes menuFade {
+    0% {
+      @apply opacity-0;
+    }
+
+    100% {
+      @apply flex opacity-100;
+    }
+  }
+
+  @keyframes menuFade {
+    0% {
+      @apply opacity-0;
+    }
+
+    100% {
+      @apply flex opacity-100;
+    }
+  }
+}

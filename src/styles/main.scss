@@ -1,0 +1,46 @@
+// base
+@import './global/layouts.scss';
+// components
+@import './components/buttons.scss';
+@import './components/inputs.scss';
+@import './components/icons.scss';
+@import './components/logo.scss';
+@import './components/badges.scss';
+@import './components/menu.scss';
+
+
+// test
+@import './global/_dev.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  html,
+  body {
+    min-height: 100vh;
+    overflow: auto;
+  }
+
+  h1 {
+    @apply text-heading-xxl;
+  }
+
+  h3 {
+    @apply text-heading-l font-medium;
+    letter-spacing: -0.022em;
+  }
+
+  h4 {
+    @apply text-heading-m font-medium;
+    letter-spacing: -0.021em;
+  }
+
+  h5 {
+    @apply text-heading-s font-medium;
+    letter-spacing: -0.017em;
+  }
+}
+

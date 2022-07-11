@@ -1,0 +1,36 @@
+@layer base {
+  body.layout-1 {
+    @apply bg-neutral-10 flex items-center justify-center;
+
+    .centered-block {
+      @apply flex flex-col shadow-1 items-center gap-8 bg-neutral-0 border border-neutral-150 p-16;
+
+      h1 {
+        @apply text-neutral-700 text-center;
+      }
+
+      .textfield {
+        @apply w-80;
+      }
+    }
+  }
+
+  body.layout-2 {
+    @apply flex;
+
+    .left {
+      width: 256px;
+      height: 100vh;
+    }
+
+    .right {
+      @apply columns-12 flex-1 bg-neutral-10;
+      height: 100vh;
+    }
+
+    .menu {
+      @apply bg-neutral-0;
+      height: 100vh;
+    }
+  }
+}

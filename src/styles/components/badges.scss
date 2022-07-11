@@ -1,0 +1,27 @@
+@layer components {
+  .badge {
+    @apply block text-s-md;
+    padding: 2px 8px;
+    border-radius: 32px;
+
+    &-primary {
+      @apply bg-primary-surface border border-primary-border text-primary-main;
+    }
+
+    &-danger {
+      @apply bg-danger-surface border border-danger-border text-danger-main;
+    }
+
+    &-warning {
+      @apply bg-warning-surface border border-warning-border text-warning-pressed;
+    }
+
+    &-success {
+      @apply bg-success-surface border border-success-border text-success-main;
+    }
+
+    &-info {
+      @apply bg-info-surface border border-info-border text-info-main;
+    }
+  }
+}

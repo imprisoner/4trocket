@@ -1,0 +1,25 @@
+@layer components {
+  .icon {
+    &-s {
+      width: 16px;
+      height: 16px;
+    }
+  
+    &-m {
+      width: 20px;
+      height: 20px;
+    }
+  
+    &-l {
+      width: 24px;
+      height: 24px;
+    }
+
+    &-s, &-m, &-l {
+      svg {
+        width: inherit;
+        height: inherit;
+      }
+    }
+  }
+}
