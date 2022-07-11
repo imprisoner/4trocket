@@ -1,7 +1,8 @@
 node_modules
+dist
 .vscode
 .yarn
 .pnp.cjs
 .pnp.loader.mjs
 .yarnrc.yml
-yarn.lock
+yarn.lock 
