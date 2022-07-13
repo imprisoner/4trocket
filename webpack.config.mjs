@@ -18,7 +18,7 @@ const pageScripts = fs
 
 const utils = fs
   .readdirSync(UTILS_DIR)
-  // .filter(filename => filename !== 'index.js')
+  .filter(filename => filename !== 'index.js')
   .map(filename => path.resolve(UTILS_DIR, filename))
 console.log(utils)
 

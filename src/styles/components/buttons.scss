@@ -1,7 +1,9 @@
 @layer components {
 
   .btn {
-    @apply flex py-1.5 px-4 items-center shadow-1 rounded text-m-md;
+    @apply flex py-1.5 px-4 items-center gap-1 shadow-1 rounded text-m-md hover:cursor-pointer outline-none outline-offset-0 w-fit;
+    @apply focus:outline-3 focus:outline-blue-50 focus:shadow-none;
+    @apply active:outline-none active:shadow-none;
     
 
     &-big {
@@ -9,13 +11,78 @@
     }
 
     &-primary {
-      @apply text-neutral-0 bg-blue-400 hover:bg-blue-500 active:bg-blue-700;
+      @apply text-neutral-0 bg-blue-400 hover:bg-blue-500 focus:active:bg-blue-700;
+    }
+
+    &-secondary {
+      @apply bg-blue-10 text-blue-400;
+      @apply hover:text-blue-500;
+      @apply focus:text-blue-500 ; 
+      @apply active:text-blue-700 active:border-none active:shadow-none;
+
+      // icon states
+
+      svg path {
+        @apply fill-blue-400;
+      }
+
+      &:hover svg path, &:focus svg path{
+        @apply fill-blue-500;
+      }
+      &:active svg path{
+        @apply fill-blue-700;
+      }
+    }
+
+    &-outlined {
+      @apply bg-neutral-0 text-neutral-700 border border-neutral-30 shadow-none;
+      @apply hover:bg-neutral-10;
+      @apply focus:bg-neutral-10 focus:border focus:border-blue-400;
+      @apply active:border-neutral-40 active:bg-neutral-20;
+      padding: 5px 15px;
+
+      svg path {
+        @apply fill-neutral-700;
+      }
+    }
+
+    &-outlined.btn-big {
+      padding: 7px 15px;
+    }
+
+    &-danger {
+      @apply text-neutral-0 bg-danger-750;
+      @apply hover:bg-danger-850;
+      @apply focus:bg-danger-850;
+      @apply active:bg-danger-900;
     }
 
     &-text {
       @apply text-blue-400 shadow-none;
+      // @apply focus:outline-3 focus:outline-blue-50;
+      // icon states
+
+      svg path {
+        @apply fill-blue-400;
+      }
+
+      &:hover svg path, &:focus svg path{
+        @apply fill-blue-500;
+      }
+
+      &:active svg path{
+        @apply fill-blue-700;
+      }
+    }
+
+    // TODO
+
+    &:disabled {
+      
     }
   }
+
+  // anchor tag
 
   a.btn {
     -webkit-appearance: button;
@@ -23,7 +90,6 @@
     appearance: button;
 
     text-decoration: none;
-    // color: initial;
   }
 
 }

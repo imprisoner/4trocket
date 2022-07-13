@@ -18,101 +18,103 @@
   }
 
   .menu-item {
-    @apply py-2.5 px-3 rounded bg-neutral-10 flex items-center gap-2 cursor-pointer outline-none;
+    &__wrapper {
+      @apply py-2.5 px-3 rounded bg-neutral-10 flex items-center gap-2 cursor-pointer outline-none;
+    }
 
     &-secodary {
       padding-right: 42px;
     }
 
-    &__icon {
+    &>&__wrapper &__icon {
       path {
         @apply fill-neutral-700;
       }
     }
 
-    &__text {
+    &>&__wrapper &__text {
       @apply text-neutral-700 flex-1 text-m-md overflow-hidden;
     }
 
     /* states */
 
     // hover
-    &:hover>&__text {
+    &:hover> &__wrapper &__text {
       @apply text-blue-400;
     }
 
     // focused
 
-    &:focus {
+    &:focus > &__wrapper{
       @apply outline-3 outline-blue-50 outline-offset-0;
     }
 
-    &:focus &__text {
+    &:focus > &__wrapper &__text {
       @apply text-blue-400;
     }
 
     // active
 
-    &.active {
+    &.active > &__wrapper{
       @apply bg-blue-400 outline-none;
     }
 
-    &.active &__text {
+    &.active > &__wrapper &__text {
       @apply text-neutral-0;
     }
 
-    &.active &__icon {
+    &.active > &__wrapper &__icon {
       path {
         @apply fill-neutral-0;
       }
     }
 
-    &.disabled &__icon {
+    &.disabled > &__wrapper &__icon {
       svg path {
         @apply fill-neutral-50;
       }
     }
 
-    &.disabled &__text {
+    &.disabled > &__wrapper &__text {
       @apply text-neutral-50;
     }
 
   }
 
-  .dropdown-item {
+  .submenu {
     @apply relative;
     // transition-duration: 2s;
 
-    &__inner-menu {
+    &__dropdown {
       @apply absolute w-full left-0 flex-col gap-2 hidden;
       top: calc(100% + 8px);
     }
 
-    &__trigger.active {
+    &.active &__trigger {
       @apply bg-neutral-10;
     }
 
-    &__trigger.active .menu-item__icon {
+    &.active &__trigger > .menu-item__icon {
       svg path {
         @apply fill-blue-400;
       }
     }
 
-    &__trigger.active .menu-item__text {
+    &.active &__trigger > .menu-item__text {
       @apply text-neutral-700;
     }
 
-    &__trigger.active .menu-item__caret {
+    &.active &__trigger > .menu-item__caret {
       transform: rotate(180deg);
     }
 
-    &__inner-menu.expanded {
+    &.active &__dropdown {
       @apply flex;
-      -webkit-animation: menuFade 0.5s ease-out;
-      -moz-animation: menuFade 0.5s ease-out;
-      -o-animation: menuFade 0.5s ease-out;
-      animation: menuFade 0.5s ease-out;
-      
+      -webkit-animation: smoothFade 0.5s ease-out;
+      -moz-animation: smoothFade 0.5s ease-out;
+      -o-animation: smoothFade 0.5s ease-out;
+      animation: smoothFade 0.5s ease-out;
+
     }
 
     &.disabled &__trigger .menu-item__caret {
@@ -124,7 +126,7 @@
 
   // dropdown fade-in animation
 
-  @-webkit-keyframes menuFade {
+  @-webkit-keyframes smoothFade {
     0% {
       @apply opacity-0;
     }
@@ -134,7 +136,7 @@
     }
   }
 
-  @-moz-keyframes menuFade {
+  @-moz-keyframes smoothFade {
     0% {
       @apply opacity-0;
     }
@@ -144,7 +146,7 @@
     }
   }
 
-  @-o-keyframes menuFade {
+  @-o-keyframes smoothFade {
     0% {
       @apply opacity-0;
     }
@@ -154,7 +156,7 @@
     }
   }
 
-  @keyframes menuFade {
+  @keyframes smoothFade {
     0% {
       @apply opacity-0;
     }

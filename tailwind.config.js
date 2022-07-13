@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     colors: {
       red: {
-        50: '#FFEBE6',
-        75: '#FFBDAD',
-        100: '#FF8F73',
-        200: '#FF7452',
+        150: '#FFE6E6',
+        200: '#FED2D2',
+        300: '#FDAAAA',
+        400: '#FF7452',
         300: '#FF5630',
         400: '#DE350B',
         500: '#BF2600'
@@ -99,7 +99,18 @@ module.exports = {
         surface: '#FFECEC',
         border: '#FFD7D7',
         hover: '#A20000',
-        pressed: '#630000'
+        pressed: '#630000',
+        150: '#FFE6E6',
+        200: '#FED2D2',
+        300: '#FDAAAA',
+        400: '#FD8282',
+        500: '#FC5A5A',
+        600: '#FB2D2D',
+        700: '#F60404',
+        750: '#DF0404',
+        800: '#C90404',
+        850: '#B20303',
+        900: '#9C0303',
       },
       warning: {
         main: '#EA780E',
@@ -124,6 +135,10 @@ module.exports = {
       }
     },
     extend: {
+      spacing: {
+        15: '3.75rem'
+      },
+
       borderWidth: {
         3: '3px'
       },

@@ -1,0 +1,43 @@
+@layer components {
+  .copy {
+    @apply bg-blue-10 border border-blue-20 rounded p-4 items-center w-fit hidden;
+
+    &__icon {
+      @apply mr-4;
+
+      svg path {
+        @apply fill-blue-400;
+      }
+    }
+
+    &__text {
+      @apply text-heading-s text-neutral-700;
+    }
+
+    &__actions {
+      @apply flex items-center gap-8;
+      margin-left: 72px;
+    }
+
+    &__button {
+      @apply cursor-pointer;
+    }
+
+    &__done {
+      @apply absolute hidden bottom-14 border border-blue-20 bg-blue-10;
+      left: calc(50vw - 100px);
+
+      &.show {
+        @apply flex;
+        -webkit-animation: smoothFade 0.5s ease-out;
+        -moz-animation: smoothFade 0.5s ease-out;
+        -o-animation: smoothFade 0.5s ease-out;
+        animation: smoothFade 0.5s ease-out;
+      }
+
+      span {
+        @apply text-heading-s text-neutral-700;
+      }
+    }
+  }
+}

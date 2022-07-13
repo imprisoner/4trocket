@@ -3,7 +3,7 @@
     @apply bg-neutral-10 flex items-center justify-center;
 
     .centered-block {
-      @apply flex flex-col shadow-1 items-center gap-8 bg-neutral-0 border border-neutral-150 p-16;
+      @apply flex flex-col shadow-1 items-center gap-8 bg-neutral-0 border border-neutral-150 p-15;
 
       h1 {
         @apply text-neutral-700 text-center;
@@ -23,14 +23,22 @@
       height: 100vh;
     }
 
-    .right {
-      @apply columns-12 flex-1 bg-neutral-10;
-      height: 100vh;
-    }
-
     .menu {
       @apply bg-neutral-0;
       height: 100vh;
+    }
+
+    .right {
+      @apply flex-1 bg-neutral-10 pl-6 py-4 pr-4;
+      height: 100vh;
+    }
+
+    .content {
+      @apply w-full flex flex-col p-8 gap-8 bg-neutral-0 border border-neutral-30;
+
+      h2 {
+        @apply text-heading-l;
+      }
     }
   }
 }
