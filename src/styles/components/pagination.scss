@@ -1,0 +1,58 @@
+@layer components {
+  .pg {
+    @apply p-4 bg-neutral-0 border border-neutral-30 flex justify-between items-center;
+  
+    &__quantity {
+      @apply flex items-end text-l-rg text-neutral-700;
+  
+      a {
+        display: block;
+        outline: none;
+        margin-left: 10px;
+      }
+  
+      >a.active {
+        font-weight: 700;
+      }
+    }
+  
+    &__nav {
+      @apply flex items-center gap-4
+    }
+  
+    &__prev,
+    &__next {
+      @apply p-1.5;
+      
+      & > .btn__icon {
+        @apply icon-m;
+      }
+
+      &>.btn__icon::after {
+        @apply inline-block;
+        width: inherit;
+        height: inherit;
+        
+        content: '';
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: 50% 50%;
+        mask-position: 50% 50%;
+      }
+    }
+  
+    &__prev >.btn__icon::after {
+      @apply bg-blue-400;
+      -webkit-mask-image: url('../assets/svg/pagination/ArrowLeft.svg');
+      mask-image: url('../assets/svg/pagination/ArrowLeft.svg');
+    }
+    &__next >.btn__icon::after {
+      @apply bg-blue-400;
+      -webkit-mask-image: url('../assets/svg/pagination/ArrowRight.svg');
+      mask-image: url('../assets/svg/pagination/ArrowRight.svg');
+    }
+  }
+}
+

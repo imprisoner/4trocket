@@ -1,0 +1,29 @@
+@layer components {
+  .filters {
+    @apply flex items-end gap-4;
+
+    &__submit {
+      @apply ml-4;
+    }
+
+    &__block {
+      @media (min-width: 1440px) {
+        flex: 1 0 0;
+        max-width: 200px;
+      }
+    }
+
+    @media (max-width: 1439px) {
+
+
+      &__block:first-child input {
+        width: 105px;
+      }
+
+      &__block .select {
+        width: 140px;
+      }
+    }
+
+  }
+}

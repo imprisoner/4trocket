@@ -1,0 +1,60 @@
+@layer components {
+}
+.cb {
+  @apply relative;
+  width: 20px;
+  height: 20px;
+  
+  &__view {
+    @apply bg-neutral-0 border border-neutral-40 rounded outline-3;
+    @apply hover:border-blue-400 hover:cursor-pointer;
+    
+    height: 100%;
+    width: 100%;
+  }
+
+  input[type=checkbox] {
+    @apply absolute;
+    left: -2000px;
+
+    &:checked + .cb__view {
+      @apply border-none;
+    }
+
+    &:focus:not(:disabled) + .cb__view {
+      @apply outline outline-3 outline-offset-0 outline-blue-50;
+    }
+
+    &:checked + .cb__view {
+      @apply bg-blue-400;
+    }
+
+    &:checked + .cb__view::after {
+      @apply block icon-m;
+      content: '';
+      background: url('../assets/svg/input/checked.svg') center / cover no-repeat;
+    }
+
+    &:indeterminate + .cb__view::after {
+      @apply block bg-blue-400 absolute;
+      top: 25%;
+      left: 25%;
+      content: '';
+      width: 10px;
+      height: 10px;
+    }
+
+    &:disabled + .cb__view {
+      @apply border-neutral-30 hover:cursor-default;
+    }
+
+    &:disabled:checked + .cb__view {
+      @apply bg-neutral-40 border-none;
+    }
+
+    &:disabled:indeterminate + .cb__view::after {
+      @apply block bg-neutral-40;
+    }
+  }
+
+}

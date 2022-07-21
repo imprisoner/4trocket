@@ -132,7 +132,8 @@ module.exports = {
         border: '#B6CFF3',
         hover: '#044DBA',
         pressed: '#043C8F'
-      }
+      },
+      transparent: 'transparent'
     },
     extend: {
       spacing: {
@@ -181,15 +182,18 @@ module.exports = {
         }],
         'heading-s': ['20px', {
           lineHeight: '28px', 
-          letterSpacing: '-0.017em'
+          letterSpacing: '-0.017em',
+          fontWeight: '500',
         }],
         'heading-m': ['28px', {
           lineHeight: '36px', 
-          letterSpacing: '-0.021em'
+          letterSpacing: '-0.021em',
+          fontWeight: '500',
         }],
         'heading-l': ['36px', {
           lineHeight: '44px', 
-          letterSpacing: '-0.022em'
+          letterSpacing: '-0.022em',
+          fontWeight: '500',
         }],
         'heading-xxl': ['56px', {
           lineHeight: '68px', 

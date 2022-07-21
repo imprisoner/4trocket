@@ -42,7 +42,8 @@
       </div>
     </div>
   </div>
-  <div class="left">
+
+  <aside class="left">
     <nav class="menu">
       <div class="menu__top">
         <div class="logo">
@@ -269,55 +270,136 @@
           </div>
         </div>
       </nav>
-  </div>
+  </aside>
   <div class="right">
-    <div class="content">
-      <h2 class="text-[#424D5D]">API ключи</h2>
-      <div class="flex flex-col gap-3">
-        <p class="text-l-rg text-[#424D5D]">Необходимо сгенерировать хотя бы 1 ключ. Данный ключ потребутеся для
-          синхронизации с модулем
-          1С-Битрикс.</p>
-        <!--  -->
-        <div class="copy">
-          <div class="copy__icon icon-l">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M15.0002 1.5C13.8165 1.50086 12.6496 1.78172 11.5951 2.31965C10.5406 2.85758 9.6283 3.63732 8.93269 4.59518C8.23709 5.55304 7.77792 6.66186 7.59269 7.83107C7.40746 9.00029 7.50143 10.1967 7.86691 11.3227L2.46988 16.7196C2.32925 16.8603 2.25025 17.0511 2.25024 17.25V21C2.25025 21.1989 2.32927 21.3897 2.46992 21.5303C2.61057 21.671 2.80133 21.75 3.00024 21.75H6.75024C6.94915 21.75 7.13991 21.671 7.28056 21.5303C7.42121 21.3897 7.50023 21.1989 7.50024 21V19.5H9.00024C9.19915 19.5 9.38991 19.421 9.53056 19.2803C9.67121 19.1397 9.75023 18.9489 9.75024 18.75V17.25H11.2502C11.4492 17.25 11.6399 17.171 11.7806 17.0304L12.6776 16.1333C13.7087 16.469 14.8004 16.5771 15.8773 16.4502C16.9543 16.3233 17.9909 15.9643 18.9157 15.3981C19.8406 14.8319 20.6317 14.072 21.2345 13.1705C21.8373 12.2691 22.2375 11.2477 22.4075 10.1767C22.5775 9.10573 22.5133 8.01061 22.2192 6.96684C21.9251 5.92307 21.4083 4.95547 20.7042 4.13072C20.0001 3.30598 19.1256 2.6437 18.1408 2.18954C17.1561 1.73538 16.0846 1.50013 15.0002 1.5ZM16.875 8.625C16.5783 8.625 16.2883 8.53703 16.0417 8.3722C15.795 8.20738 15.6027 7.97311 15.4892 7.69903C15.3757 7.42494 15.346 7.12334 15.4038 6.83236C15.4617 6.54139 15.6046 6.27412 15.8144 6.06434C16.0241 5.85456 16.2914 5.7117 16.5824 5.65382C16.8734 5.59594 17.175 5.62565 17.449 5.73918C17.7231 5.85271 17.9574 6.04497 18.1222 6.29165C18.287 6.53832 18.375 6.82833 18.375 7.125C18.375 7.52282 18.217 7.90435 17.9357 8.18566C17.6544 8.46696 17.2728 8.625 16.875 8.625Z"
-                fill="#97A0AF" />
-            </svg>
-          </div>
-          <p class="copy__text" id="key">Key for site #1</p>
-          <div class="copy__actions">
-            <div class="copy__button icon-m" id="copy">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M20.2494 2.99939H8.24942C8.05051 2.9994 7.85975 3.07842 7.7191 3.21907C7.57845 3.35972 7.49943 3.55048 7.49942 3.74939V7.49948H3.74933C3.55042 7.49949 3.35966 7.57851 3.21901 7.71916C3.07836 7.85981 2.99934 8.05057 2.99933 8.24948V20.2495C2.99934 20.4484 3.07836 20.6392 3.21901 20.7798C3.35966 20.9205 3.55042 20.9995 3.74933 20.9995H15.7493C15.9482 20.9995 16.139 20.9205 16.2797 20.7798C16.4203 20.6392 16.4993 20.4484 16.4993 20.2495V16.4994H20.2494C20.4483 16.4994 20.6391 16.4204 20.7797 16.2797C20.9204 16.1391 20.9994 15.9483 20.9994 15.7494V3.74939C20.9994 3.55048 20.9204 3.35972 20.7797 3.21907C20.6391 3.07842 20.4483 2.9994 20.2494 2.99939ZM19.4994 14.9994H16.4993V8.24948C16.4993 8.05057 16.4203 7.85981 16.2797 7.71916C16.139 7.57851 15.9482 7.49949 15.7493 7.49948H8.99942V4.49939H19.4994V14.9994Z"
-                  fill="#97A0AF" />
-              </svg>
+    <header class="header min-w-max">
+      <fieldset class="filters">
+        <div class="filters__block">
+          <label class="input-group">
+            <div class="input-group__label-text">Номер заказа</div>
+            <div class="input-group__input-wrap">
+              <input type="text" value="4925_345" />
             </div>
-            <div class="copy__button icon-m" id="dialog">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M20.2496 4.5H16.5V3.75C16.4993 3.15347 16.2621 2.58157 15.8402 2.15975C15.4184 1.73794 14.8465 1.50067 14.25 1.5H9.75C9.15347 1.50067 8.58157 1.73794 8.15976 2.15975C7.73794 2.58157 7.50067 3.15347 7.5 3.75V4.5H3.74963C3.55072 4.5 3.35996 4.57902 3.2193 4.71967C3.07865 4.86032 2.99963 5.05109 2.99963 5.25C2.99963 5.44891 3.07865 5.63968 3.2193 5.78033C3.35996 5.92098 3.55072 6 3.74963 6H4.49963V19.5C4.50009 19.8977 4.65827 20.279 4.93948 20.5602C5.22068 20.8414 5.60195 20.9995 5.99963 21H17.9996C18.3973 20.9995 18.7786 20.8414 19.0598 20.5602C19.341 20.279 19.4992 19.8977 19.4996 19.5V6H20.2496C20.4485 6 20.6393 5.92098 20.78 5.78033C20.9206 5.63968 20.9996 5.44891 20.9996 5.25C20.9996 5.05109 20.9206 4.86032 20.78 4.71967C20.6393 4.57902 20.4485 4.5 20.2496 4.5ZM10.5 15.75C10.5 15.9489 10.421 16.1397 10.2803 16.2803C10.1397 16.421 9.94891 16.5 9.75 16.5C9.55109 16.5 9.36032 16.421 9.21967 16.2803C9.07902 16.1397 9 15.9489 9 15.75V9.75C9 9.55109 9.07902 9.36032 9.21967 9.21967C9.36032 9.07902 9.55109 9 9.75 9C9.94891 9 10.1397 9.07902 10.2803 9.21967C10.421 9.36032 10.5 9.55109 10.5 9.75V15.75ZM15 15.75C15 15.9489 14.921 16.1397 14.7803 16.2803C14.6397 16.421 14.4489 16.5 14.25 16.5C14.0511 16.5 13.8603 16.421 13.7197 16.2803C13.579 16.1397 13.5 15.9489 13.5 15.75V9.75C13.5 9.55109 13.579 9.36032 13.7197 9.21967C13.8603 9.07902 14.0511 9 14.25 9C14.4489 9 14.6397 9.07902 14.7803 9.21967C14.921 9.36032 15 9.55109 15 9.75V15.75ZM15 4.5H9V3.75C9.00023 3.55116 9.07932 3.36052 9.21992 3.21992C9.36052 3.07932 9.55116 3.00023 9.75 3H14.25C14.4488 3.00023 14.6395 3.07932 14.7801 3.21992C14.9207 3.36052 14.9998 3.55116 15 3.75V4.5Z"
-                  fill="#97A0AF" />
-              </svg>
-            </div>
-          </div>
+          </label>
         </div>
-        <!--  -->
+        <div class="filters__block">
+          <label class="input-group">
+            <div class="input-group__label-text">Дата поступления на ПВЗ</div>
+            <div class="input-group__input-wrap">
+              <input type="date" value="11.03.2022" />
+            </div>
+          </label>
+        </div>
+        <div class="filters__block">
+          <label class="input-group">
+            <div class="input-group__label-text">Дата выдачи заказа</div>
+            <div class="input-group__input-wrap">
+              <input type="date" value="15.07.2021" />
+            </div>
+          </label>
+        </div>
+        <div class="filters__block">
+          <label class="input-group">
+            <div class="input-group__label-text">Статус</div>
+            <div class="input-group__input-wrap">
+              <select name="" id="status_filter">
+                <option value="">Все</option>
+              </select>
+            </div>
+          </label>
+        </div>
+        <div class="filters__block">
+          <label class="input-group">
+            <div class="input-group__label-text">Тип оплаты</div>
+            <div class="input-group__input-wrap">
+              <select name="" id="payment_filter">
+                <option value="">Все</option>
+              </select>
+            </div>
+          </label>
+        </div>
+        <div class="filters__submit">
+          <button class="btn btn-outlined btn-big">Применить фильтры</button>
+        </div>
+      </fieldset>
+    </header>
+    <main>
+      <div class="content">
+        <table class="t-orders">
+          <thead>
+            <tr>
+              <th># Order</th>
+              <th>Получатель</th>
+              <th>Статус</th>
+              <th>Тип оплаты</th>
+              <th>Дата выдачи</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>6084_1</th>
+              <td>Афонин Максим</td>
+              <td>
+                <span class="badge badge-success">Передан клиенту</span>
+              </td>
+              <td>
+                <span class="badge badge-warning">Требуется оплата</span>
+              </td>
+              <td>02.10.2021</td>
+            </tr>
+            <tr>
+              <th>3577_1465</th>
+              <td>Павлова Анна</td>
+              <td>
+                <span class="badge badge-success">Передан клиенту</span>
+              </td>
+              <td>
+                <span class="badge badge-success">Оплачено наличными</span>
+              </td>
+              <td>02.10.2021</td>
+            </tr>
+            <tr>
+              <th>4925_345</th>
+              <td>Константинопольский Константин</td>
+              <td>
+                <span class="badge badge-info">Поступил в ПВЗ</span>
+              </td>
+              <td>
+                <span class="badge badge-warning">Требуется оплата</span>
+              </td>
+              <td>02.10.2021</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <label class="textfield w-[336px]">
-        <div class="label-text">Название ключа</div>
-        <div class="input-wrap">
-          <input type="text" placeholder="Введите название ключа" id="keyInput">
+    </main>
+    <footer>
+      <div class="pg">
+        <p class="pg__quantity">
+          Показать по
+          <a href="#">10</a>
+          <a href="#">20</a>
+          <a href="#" class="active">50</a>
+          <a href="#">100</a>
+        </p>
+        <div class="pg__nav">
+          <a href="#" class="btn btn-secondary pg__prev">
+            <div class="btn__icon"></div>
+          </a>
+          <a href="#" class="btn btn-outlined pg__page">1</a>
+          <a href="#" class="btn btn-outlined pg__page">2</a>
+          <a href="#" class="btn btn-outlined pg__page">...</a>
+          <a href="#" class="btn btn-outlined pg__page">13</a>
+          <a href="#" class="btn btn-outlined pg__page">14</a>
+          <a href="#" class="btn btn-outlined pg__page">...</a>
+          <a href="#" class="btn btn-outlined pg__page">56</a>
+          <a href="#" class="btn btn-outlined pg__page">57</a>
+          <a href="#" class="btn btn-secondary pg__next">
+            <div class="btn__icon"></div>
+          </a>
         </div>
-        <div class="helper-text"></div>
-      </label>
-      <button class="btn btn-primary" type="button" id="createKey">Создать</button>
-    </div>
-  </div>
-  <div class="copy copy__done">
-    <span></span>
+      </div>
+    </footer>
   </div>
   <script src="./js/utils.js"></script>
   <script src="./js/index.js"></script>

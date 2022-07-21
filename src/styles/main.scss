@@ -1,15 +1,23 @@
 // base
 @import './global/layouts.scss';
+@import './global/fonts.scss';
 // components
 @import './components/buttons.scss';
 @import './components/inputs.scss';
+@import './components/select.scss';
 @import './components/icons.scss';
 @import './components/logo.scss';
 @import './components/badges.scss';
 @import './components/menu.scss';
 @import './components/modal.scss';
 @import './components/copy.scss';
+@import './components/filters.scss';
+@import './components/checkbox.scss';
+@import './components/pagination.scss';
+@import './components/table.scss';
 
+// pages
+@import './pages/guideline.scss';
 
 // test
 @import './global/_dev.scss';
@@ -24,6 +32,7 @@
   body {
     min-height: 100vh;
     overflow: auto;
+    font-family: 'Inter';
   }
 
   h1 {

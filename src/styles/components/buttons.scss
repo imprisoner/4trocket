@@ -5,33 +5,83 @@
     @apply focus:outline-3 focus:outline-blue-50 focus:shadow-none;
     @apply active:outline-none active:shadow-none;
     
+    &__icon {
+      @apply icon-s;
+    }
+
+    &__icon::after {
+      @apply inline-block;
+        width: inherit;
+        height: inherit;
+        
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: 50% 50%;
+        mask-position: 50% 50%;
+    }
 
     &-big {
       @apply py-2 text-l-md;
     }
 
-    &-primary {
-      @apply text-neutral-0 bg-blue-400 hover:bg-blue-500 focus:active:bg-blue-700;
+    &-icon {
+     @apply p-1.5;
     }
+
+    &-icon &__icon{
+      @apply icon-m;
+    }
+
+    &-primary {
+      @apply text-neutral-0 bg-blue-400 hover:bg-blue-500 focus:bg-blue-500 active:bg-blue-700;
+    }
+
+    // icon states
+
+    &-primary svg path {
+      @apply fill-neutral-0;
+    }
+
+    &-primary &__icon::after {
+      @apply bg-neutral-0;
+    }
+    
 
     &-secondary {
       @apply bg-blue-10 text-blue-400;
       @apply hover:text-blue-500;
       @apply focus:text-blue-500 ; 
-      @apply active:text-blue-700 active:border-none active:shadow-none;
+      @apply active:text-blue-700 active:shadow-none;
+    }
 
-      // icon states
+    // icon states
 
-      svg path {
-        @apply fill-blue-400;
-      }
+    &-secondary svg path {
+      @apply fill-blue-400;
+    }
 
-      &:hover svg path, &:focus svg path{
-        @apply fill-blue-500;
-      }
-      &:active svg path{
-        @apply fill-blue-700;
-      }
+    &-secondary:hover svg path, 
+    &-secondary:focus svg path {
+      @apply fill-blue-500;
+    }
+
+    &-secondary:active svg path{
+      @apply fill-blue-700;
+    }
+
+    &-secondary &__icon::after {
+      @apply bg-blue-400;
+    }
+
+    &-secondary:hover &__icon::after,
+    &-secondary:hover &__icon::after {
+      @apply bg-blue-500;
+    }
+
+    &-secondary:active &__icon::after {
+      @apply bg-blue-700;
     }
 
     &-outlined {
@@ -39,45 +89,91 @@
       @apply hover:bg-neutral-10;
       @apply focus:bg-neutral-10 focus:border focus:border-blue-400;
       @apply active:border-neutral-40 active:bg-neutral-20;
-      padding: 5px 15px;
-
-      svg path {
-        @apply fill-neutral-700;
-      }
+      // padding: 5px 15px;
     }
 
-    &-outlined.btn-big {
-      padding: 7px 15px;
+    // &-outlined.btn-big {
+    //   padding: 7px 15px;
+    // }
+
+    // icon states
+
+    &-outlined svg path {
+      @apply fill-neutral-700;
+    }
+
+    &-outlined &__icon::after {
+      @apply bg-neutral-700;
     }
 
     &-danger {
       @apply text-neutral-0 bg-danger-750;
       @apply hover:bg-danger-850;
       @apply focus:bg-danger-850;
-      @apply active:bg-danger-900;
+      @apply active:bg-danger-900;   
+    }
+
+    &-danger svg path {
+      @apply fill-neutral-0;
+    }
+
+    &-danger &__icon::after {
+      @apply bg-neutral-0;
     }
 
     &-text {
       @apply text-blue-400 shadow-none;
-      // @apply focus:outline-3 focus:outline-blue-50;
-      // icon states
-
-      svg path {
-        @apply fill-blue-400;
-      }
-
-      &:hover svg path, &:focus svg path{
-        @apply fill-blue-500;
-      }
-
-      &:active svg path{
-        @apply fill-blue-700;
-      }
+      
     }
 
-    // TODO
+    &-text svg path {
+      @apply fill-blue-400;
+    }
 
-    &:disabled {
+    &-text:hover svg path, 
+    &-text:focus svg path {
+      @apply fill-blue-500;
+    }
+
+    &-text:active svg path{
+      @apply fill-blue-700;
+    }
+    
+    &-text &__icon::after {
+      @apply bg-blue-400;
+    }
+
+    &-text:hover &__icon::after, 
+    &-text:focus &__icon::after {
+      @apply bg-blue-500;
+    }
+
+    &-text:active &__icon::after{
+      @apply bg-blue-700;
+    }
+
+    
+    &:disabled, 
+    &.disabled {
+      @apply bg-neutral-20 border border-neutral-30 text-neutral-50 shadow-none;
+      @apply hover:cursor-default hover:bg-neutral-20  hover:shadow-none;
+    }
+
+    // icon states
+
+    &:disabled svg path, 
+    &.disabled svg path {
+      @apply fill-neutral-50;
+    }
+
+    &:disabled &__icon::after, 
+    &.disabled &__icon::after {
+      @apply bg-neutral-50;
+    }
+
+    &-text:disabled,
+    &-text.disabled {
+      @apply border-none bg-transparent hover:bg-transparent;
       
     }
   }

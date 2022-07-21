@@ -1,15 +1,25 @@
-import { clickOutside } from "utils"
+import { clickOutside } from 'utils'
 
-const overlay = document.querySelector('.modal')
-const dialog = overlay.querySelector('.modal__dialog')
-const closeBtn = overlay.querySelector('.modal__close')
+export default class Modal {
+  constructor(selector = '') {
+    if (selector) {
+      this.modal = document.querySelector(selector)
+    } else {
+      this.modal = document.querySelector('.modal')
+    }
+    // init modal
+    const dialog = this.modal.querySelector('.modal__dialog')
+    const closeBtn = this.modal.querySelector('.modal__close')
 
-export default () => {
+    clickOutside(dialog, this.close)
+    closeBtn.addEventListener('click', this.close)
+  }
 
-  closeBtn.addEventListener('click', closeModal)
-  clickOutside(dialog, closeModal)
+  open() {
+    this.modal.classList.add('open')
+  }
 
-  function closeModal() {
-    overlay.classList.remove('open')
+  close() {
+    this.modal.classList.remove('open')
   }
 }

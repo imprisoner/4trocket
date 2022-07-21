@@ -1,0 +1,37 @@
+@layer components {
+
+}
+
+table {
+    
+    thead {
+      tr {
+        @apply bg-neutral-10 text-m-md text-neutral-700;
+      }
+    }
+
+    tbody {
+      tr {
+        @apply bg-neutral-0 text-m-rg text-neutral-200;
+      }
+
+      th {
+        @apply text-m-md;
+      }
+    }
+
+    th {
+      @apply text-left
+    }
+    th, td {
+      @apply py-3.5 px-4;
+    }
+}
+
+table.t-orders {
+  tbody {
+    th {
+      @apply text-blue-400;
+    }
+  }
+}
