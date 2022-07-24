@@ -1,0 +1,49 @@
+// checkbox and radio
+
+@mixin custom-checkbox-control($parentSelector) {
+  @apply relative flex items-center gap-2 text-neutral-80;
+
+  &__view {
+    @apply bg-neutral-0 border border-neutral-40 rounded outline-3 w-5 h-5 text-neutral-80;
+    @apply hover:border-blue-400 hover:cursor-pointer;
+  }
+
+  input[type=checkbox] {
+    @apply absolute;
+    z-index: -1;
+    left: -2000px;
+
+    &:checked+#{$parentSelector}__view {
+      @apply border-none;
+    }
+
+    &:focus:not(:disabled)+#{$parentSelector}__view {
+      @apply outline outline-3 outline-offset-0 outline-blue-50;
+    }
+
+    &:checked+#{$parentSelector}__view {
+      @apply bg-blue-400;
+    }
+
+    &:disabled+#{$parentSelector}__view {
+      @apply border-neutral-30 hover:cursor-default;
+    }
+
+    &:disabled~#{$parentSelector}__label-text {
+      @apply text-neutral-50;
+    }
+  }
+}
+
+// icon mask
+
+@mixin icon-mask {
+  content: '';
+
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: 50% 50%;
+  mask-position: 50% 50%;
+}

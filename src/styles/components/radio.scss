@@ -1,0 +1,30 @@
+@layer components {
+  .radio {
+    @include custom-checkbox-control('.radio');
+
+    &__view {
+      @apply rounded-full;
+    }
+
+    input[type=checkbox] {
+      &:checked + .radio__view {
+        @apply bg-neutral-0 border border-solid border-blue-400 flex items-center justify-center;
+      }
+
+      &:checked + .radio__view::after {
+        @apply block bg-blue-400 w-2.5 h-2.5 rounded-full;
+        content:'';
+      }
+
+      &:disabled:checked+.radio__view {
+        @apply bg-neutral-0 border-neutral-40;
+      }
+
+      &:disabled+.radio__view::after {
+        @apply block bg-neutral-40;
+      }
+    }
+
+    
+  }
+}

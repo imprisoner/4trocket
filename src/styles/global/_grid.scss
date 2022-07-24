@@ -1,0 +1,65 @@
+.container-fluid {
+  @apply gap-4 px-12;
+}
+
+.row {
+  @apply flex flex-wrap -mx-2 flex-0-auto;
+
+  &>* {
+    @apply flex-shrink-0 w-full max-w-full px-2;
+  }
+}
+
+.col {
+  &-auto {
+    @apply w-auto flex-0-auto;
+  }
+
+  &-1 {
+    @apply w-1/12 flex-0-auto;
+  }
+
+  &-2 {
+    @apply w-2/12 flex-0-auto;
+  }
+
+  &-3 {
+    @apply w-3/12 flex-0-auto;
+  }
+
+  &-4 {
+    @apply w-4/12 flex-0-auto;
+  }
+
+  &-5 {
+    @apply w-5/12 flex-0-auto;
+  }
+
+  &-6 {
+    @apply w-6/12 flex-0-auto;
+  }
+
+  &-7 {
+    @apply w-7/12 flex-0-auto;
+  }
+
+  &-8 {
+    @apply w-8/12 flex-0-auto;
+  }
+
+  &-9 {
+    @apply w-9/12 flex-0-auto;
+  }
+
+  &-10 {
+    @apply w-10/12 flex-0-auto;
+  }
+
+  &-11 {
+    @apply w-11/12 flex-0-auto;
+  }
+
+  &-12 {
+    @apply w-full flex-0-auto;
+  }
+}

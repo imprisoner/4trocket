@@ -1,5 +1,5 @@
 #guideline {
-  .content > div:not(:first-child) {
+  .content > section {
     display: none;
   }
 }

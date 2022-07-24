@@ -113,18 +113,34 @@ module.exports = {
         900: '#9C0303',
       },
       warning: {
-        main: '#EA780E',
-        surface: '#FFF2E7',
-        border: '#FFCA99',
-        hover: '#D16603',
-        pressed: '#653508'
+        // main: '#EA780E',
+        // surface: '#FFF2E7',
+        // border: '#FFCA99',
+        // hover: '#D16603',
+        // pressed: '#653508',
+        50: '#FFFAE6',
+        75: '#FFF0B3',
+        100: '#FFE380',
+        200: '#FFC400',
+        300: '#FFAB00',
+        400: '#FF991F',
+        500: '#FF8B00'
       },
       success: {
-        main: '#008243',
-        surface: '#EBF5F0',
-        border: '#B3DAC7',
-        hover: '#006836',
-        pressed: '#005029'
+        // main: '#008243',
+        // surface: '#EBF5F0',
+        // border: '#B3DAC7',
+        // hover: '#006836',
+        // pressed: '#005029',
+        40: '#EBF5F0',
+        50: '#E3FCEF',
+        90: '#ABF5D1',
+        100: '#79F2C0',
+        200: '#57D9A3',
+        300: '#36B37E',
+        400: '#008243',
+        500: '#006836',
+        600: '#005029'
       },
       info: {
         main: '#0B5CD7',
@@ -139,7 +155,9 @@ module.exports = {
       spacing: {
         15: '3.75rem'
       },
-
+      flex: {
+        '0-auto': '0 0 auto'
+      },
       borderWidth: {
         3: '3px'
       },

@@ -4,23 +4,25 @@
     @apply flex py-1.5 px-4 items-center gap-1 shadow-1 rounded text-m-md hover:cursor-pointer outline-none outline-offset-0 w-fit;
     @apply focus:outline-3 focus:outline-blue-50 focus:shadow-none;
     @apply active:outline-none active:shadow-none;
-    
+  
+    height: 40px;
+
     &__icon {
       @apply icon-s;
     }
 
-    &__icon::after {
-      @apply inline-block;
-        width: inherit;
-        height: inherit;
+    // &__icon::after {
+    //   @apply inline-block;
+    //     width: inherit;
+    //     height: inherit;
         
-        -webkit-mask-size: contain;
-        mask-size: contain;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-position: 50% 50%;
-        mask-position: 50% 50%;
-    }
+    //     -webkit-mask-size: contain;
+    //     mask-size: contain;
+    //     -webkit-mask-repeat: no-repeat;
+    //     mask-repeat: no-repeat;
+    //     -webkit-mask-position: 50% 50%;
+    //     mask-position: 50% 50%;
+    // }
 
     &-big {
       @apply py-2 text-l-md;

@@ -34,16 +34,19 @@
       </svg>
     </div>
     <h1 class="max-w-[480px]">Восстановление пароля</h1>
-    <p class="text-l-rg text-neutral-700 w-80 text-center">Введите Электронную почту, которой вы использовали при регистрации</p>
-    <label class="textfield error">
-      <div class="input-wrap">
-        <input type="text" placeholder="Электронная почта">
+    <p class="text-m-rg text-neutral-700 w-80 text-center">Введите Электронную почту,<br>которую вы использовали при регистрации</p>
+    <label class="input-group textfield">
+      <div class="input-group__wrap">
+        <input type="email" placeholder="Электронная почта" />
       </div>
-      <div class="helper-text">Аккаунт с таким адресом почты не найден</div>
+      <div class="input-group__helper-text"></div>
     </label>
     <button type="submit" class="btn btn-big btn-primary">Восстановить</button>
-    <a href="#" class="btn btn-big btn-text">Войти</a>
+    <a href="/authorization.html" class="btn btn-big btn-text">Войти</a>
   </form>
+
+  <script src="./js/utils.js"></script>
+  <script src="./js/recover.mockup.js"></script>
 </body>
 
 </html>

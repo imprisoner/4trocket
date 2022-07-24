@@ -32,7 +32,7 @@
       }
 
       &:invalid:not(:hover) {
-        @apply border-danger-main pl-7;
+        @apply border-danger-main;
       }
 
       &:disabled>.helper-text {
@@ -92,7 +92,7 @@
 
         &:not(:hover),
         &:disabled {
-          @apply border-success-main;
+          @apply border-success-400;
         }
 
 
@@ -100,7 +100,7 @@
 
 
       .helper-text {
-        @apply text-success-main block;
+        @apply text-success-400 block;
       }
     }
   } 

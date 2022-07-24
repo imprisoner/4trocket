@@ -1,17 +1,70 @@
 @layer components {
 
   .input-group {
-    @apply flex flex-col;
+    @apply flex flex-col gap-1;
 
     &__label-text {
-      @apply text-m-rg mb-1 text-neutral-700;
+      @apply text-m-rg text-neutral-700;
     }
 
     &__helper-text {
-      @apply text-s-rg mt-1 text-neutral-80 hidden;
+      @apply text-s-rg text-neutral-80;
     }
 
     &__wrap {
+      @apply relative flex;
+      height: 40px;
+    }
+
+    input,
+    textarea {
+      @apply w-full py-2 px-3 text-l-rg border border-neutral-40 rounded outline-none bg-neutral-10;
+      @apply hover:border-blue-400;
+      @apply disabled:hover:border-neutral-40 disabled:bg-neutral-20;
+      @apply focus:border-blue-400 focus:bg-neutral-0 focus:text-neutral-700 focus:outline-3 focus:outline-blue-50 focus:outline-offset-0;
+      @apply placeholder:text-neutral-60 disabled:placeholder:text-neutral-50;
+    }
+
+    textarea {
+      @apply shadow-custom-inner focus:border-2;
+      height: 66px;
+
+      &:focus {
+        padding: 7px 11px;
+      }
+    }
+
+    // DATE INPUT
+    // input[type=date] {
+    //   @apply cursor-text text-neutral-10;
+    //   &::-webkit-calendar-picker-indicator {
+    //     display: none;
+    //     -webkit-appearance: none;
+    //   }
+
+    //   &::before {
+    //     @apply absolute text-neutral-60;
+    //     content: attr(placeholder);
+
+    //     // margin-right: 0.5em;
+    //   }
+
+    //   &:focus {
+    //     // @apply text-neutral-700;
+
+    //     &::before{
+    //       content: none;
+    //     }
+    //   }
+
+    // }
+
+    // TEXTFIELD
+    &.textfield &__helper-text {
+      @apply hidden;
+    }
+
+    &.textfield &__wrap {
       @apply relative flex;
 
       &::after {
@@ -23,32 +76,9 @@
       }
     }
 
-    input,
-    textarea {
-      @apply w-full py-2 px-3 text-l-rg border border-neutral-40 rounded outline-none bg-neutral-10 placeholder:text-neutral-60 disabled:placeholder:text-neutral-50 disabled:hover:border-neutral-40 disabled:bg-neutral-20 focus:border-blue-400 focus:bg-neutral-0 focus:text-neutral-700 focus:outline-3 focus:outline-blue-50 focus:outline-offset-0;
-
-      &:not(:disabled) {
-        @apply hover:border-blue-400;
-      }
-
-      &:invalid:not(:hover) {
-        @apply border-danger-main pl-7;
-      }
-
-      &:disabled>.helper-text {
-        @apply text-neutral-50;
-      }
-    }
-
-    textarea {
-      // TODO padding on focus
-      @apply shadow-custom-inner focus:border-2 focus:py-1.5 focus:px-2.5;
-      height: 66px;
-    }
 
     &.error,
     &.success {
-
       .input-group__wrap {
         &::after {
           @apply block;
@@ -67,7 +97,6 @@
     }
 
     &.error {
-
       .input-group__wrap {
         &::after {
           background: url('../assets/svg/input/error.svg') center / contain no-repeat;
@@ -75,15 +104,13 @@
       }
 
       input {
-
-        &:not(:hover),
-        &:disabled {
-          @apply border-danger-main;
+        &:not(:focus) {
+          @apply border-danger-750;
         }
       }
 
       .input-group__helper-text {
-        @apply text-danger-main;
+        @apply text-danger-750;
       }
     }
 
@@ -95,22 +122,27 @@
       }
 
       input {
-
-        &:not(:hover),
-        &:disabled {
-          @apply border-success-main;
+        &:not(:focus) {
+          @apply border-success-400;
         }
-
       }
 
       .input-group__text {
-        @apply text-success-main block;
+        @apply text-success-400 block;
+      }
+    }
+
+    &.error.disabled {
+      input {
+        @apply border-danger-750;
+      }
+    }
+
+    &.success.disabled {
+      input {
+        @apply border-success-400;
       }
     }
   }
 
-  input[type=date]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
-  }
 }

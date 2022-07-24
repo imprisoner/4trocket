@@ -1,0 +1,31 @@
+@layer components {
+  .tabs {
+    @apply flex gap-4 relative bg-neutral-0 w-fit;
+    box-shadow: 0px -1px 0px 0px #0000001A inset;
+  
+    &__item {
+      @apply py-3.5 px-4 text-m-md text-neutral-80;
+      @apply hover:text-blue-500 hover:cursor-pointer;
+      @apply active:text-blue-700;
+      transition: box-shadow 0.2s ease-in;
+      &:focus-visible {
+        @apply focused;
+        box-shadow: none;
+      }
+    }
+    
+    &__item.active {
+      @apply text-neutral-700;
+      box-shadow: 0px -3px 0px 0px #4F31E4 inset;
+      
+      &:focus-visible {
+        box-shadow: none;
+      }
+    }
+
+    &__item.disabled {
+      @apply text-neutral-50;
+      box-shadow: 0px -3px 0px 0px #E0E0E0 inset;
+    }
+  }
+}

@@ -1,6 +1,9 @@
 // base
 @import './global/layouts.scss';
 @import './global/fonts.scss';
+@import './global/_utils.scss';
+@import './global/_mixins.scss';
+@import './global/_grid.scss';
 // components
 @import './components/buttons.scss';
 @import './components/inputs.scss';
@@ -15,6 +18,11 @@
 @import './components/checkbox.scss';
 @import './components/pagination.scss';
 @import './components/table.scss';
+@import './components/card.scss';
+@import './components/notification.scss';
+@import './components/accordion.scss';
+@import './components/tabs.scss';
+@import './components/radio.scss';
 
 // pages
 @import './pages/guideline.scss';

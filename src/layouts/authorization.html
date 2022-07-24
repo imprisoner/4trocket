@@ -10,7 +10,7 @@
 </head>
 
 <body class="layout-1">
-  <form class="centered-block">
+  <form action="/" method="post" class="centered-block">
     <div class="logo">
       <svg width="1096" height="134" viewBox="0 0 1096 134" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M262.044 0V29.9531H215.535V134H183.495V29.9531H136.978V0H262.044Z" fill="#2C353E" />
@@ -36,18 +36,18 @@
       </svg>
     </div>
     <h1 class="max-w-[480px]">Авторизация</h1>
-    <label class="textfield">
-      <div class="input-wrap">
-        <input type="text" placeholder="Электронная почта">
+    <label class="input-group textfield">
+      <div class="input-group__wrap">
+        <input type="email" placeholder="Электронная почта" />
       </div>
     </label>
-    <label class="textfield">
-      <div class="input-wrap">
-        <input type="text" placeholder="Пароль">
+    <label class="input-group textfield">
+      <div class="input-group__wrap">
+        <input type="password" placeholder="Пароль" minlength="3" />
       </div>
     </label>
     <button type="submit" class="btn btn-big btn-primary">Войти</button>
-    <a href="#" class="btn btn-big btn-text">Забыли пароль?</a>
+    <a href="/recover.html" class="btn btn-big btn-text">Забыли пароль?</a>
   </form>
 </body>
 

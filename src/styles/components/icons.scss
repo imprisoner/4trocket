@@ -4,22 +4,44 @@
       width: 16px;
       height: 16px;
     }
-  
+
     &-m {
       width: 20px;
       height: 20px;
     }
-  
+
     &-l {
       width: 24px;
       height: 24px;
     }
 
-    &-s, &-m, &-l {
+    &-s,
+    &-m,
+    &-l {
       svg {
         width: inherit;
         height: inherit;
       }
     }
+  }
+
+
+  //
+
+
+
+  .icon-close {
+    @apply cursor-pointer;
+    @include icon-mask;
+
+    -webkit-mask-image: url('../assets/svg/icons/X.svg');
+    mask-image: url('../assets/svg/icons/X.svg');
+  }
+
+  .icon-caret-down {
+    @include icon-mask;
+
+    -webkit-mask-image: url('../assets/svg/icons/CaretDown.svg');
+    mask-image: url('../assets/svg/icons/CaretDown.svg');
   }
 }

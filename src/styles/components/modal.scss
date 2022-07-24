@@ -33,22 +33,26 @@
     }
 
     &__top &__close {
-      @apply ml-auto;
-    }
-
-    &__top &__close {
-      @apply cursor-pointer;
+      @apply ml-auto cursor-pointer bg-neutral-60 icon-m;
     }
 
     &__actions {
       @apply px-0 pt-4 pb-0 flex items-end gap-2;
     }
 
+    &__close {
+      @apply icon-close icon-m;
+    }
     // states
 
     &-danger &__status-icon {
       svg path {
         @apply fill-danger-750;
+      }
+    }
+    &-primary &__status-icon {
+      svg path {
+        @apply fill-blue-400;
       }
     }
   }

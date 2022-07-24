@@ -1,5 +1,3 @@
-import { clickOutside } from 'utils'
-
 export default class Modal {
   constructor(selector = '') {
     if (selector) {
@@ -11,11 +9,18 @@ export default class Modal {
     const dialog = this.modal.querySelector('.modal__dialog')
     const closeBtn = this.modal.querySelector('.modal__close')
 
-    clickOutside(dialog, this.close)
-    closeBtn.addEventListener('click', this.close)
+    // overlay click
+    if (dialog) {
+      this.modal.addEventListener('click', e => {
+        if(e.target === this.modal) this.close()
+      })
+    }
+
+    closeBtn.addEventListener('click', () => this.close())
   }
 
   open() {
+    console.log(this.modal)
     this.modal.classList.add('open')
   }
 

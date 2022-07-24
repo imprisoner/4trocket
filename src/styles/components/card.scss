@@ -1,0 +1,25 @@
+.card {
+  @apply flex flex-col rounded shadow-1 border border-neutral-30;
+  width: 282px;
+
+  &__img {
+    @apply w-full;
+    height: 190px;
+  }
+
+  &__body {
+    @apply p-6;
+  }
+
+  &__title {
+    @apply mb-2 text-heading-s text-neutral-700;
+  }
+
+  &__text {
+    @apply mb-4 text-m-rg text-neutral-70;
+  }
+
+  &__bottom p{
+    @apply text-s-rg text-neutral-60;
+  }
+}

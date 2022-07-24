@@ -1,0 +1,31 @@
+@layer components{}
+
+.accordion {
+  @apply flex flex-col border border-neutral-30 rounded gap-px;
+
+  &__item {
+    @apply relative flex flex-col w-full hover:cursor-pointer bg-neutral-0;
+
+    &::after {
+      @apply icon-s icon-caret-down absolute top-3 right-3 bg-neutral-80;
+    }
+  }
+
+  &__top {
+    @apply text-m-md text-neutral-700 py-2.5 px-4;
+  }
+
+  &__content {
+    @apply text-m-rg text-neutral-80 max-h-0 overflow-hidden mt-0.5 mb-2.5 mx-4 ;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  &__item.active &__content {
+    // @apply pt-0.5 pb-2.5 px-4 ;
+    max-height: 150px;
+  }
+
+  &__item.active::after {
+    @apply rotate-180;
+  }
+}

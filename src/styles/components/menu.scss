@@ -1,6 +1,6 @@
 @layer components {
   .menu {
-    @apply flex flex-col items-center w-full bg-neutral-10;
+    @apply flex flex-col items-center w-full bg-neutral-10 border border-neutral-30;
 
 
     &__top {
@@ -18,8 +18,13 @@
   }
 
   .menu-item {
+    @apply rounded;
+
+    &:focus {
+      @apply focused;
+    }
     &__wrapper {
-      @apply py-2.5 px-3 rounded bg-neutral-10 flex items-center gap-2 cursor-pointer outline-none;
+      @apply py-2.5 px-3 bg-neutral-10 flex items-center gap-2 cursor-pointer;
     }
 
     &-secodary {

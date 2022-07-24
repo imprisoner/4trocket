@@ -1,23 +1,23 @@
 @layer components {
   .badge {
-    @apply inline-block text-s-md;
+    @apply inline-block text-s-md whitespace-nowrap w-fit;
     padding: 2px 8px;
     border-radius: 32px;
 
     &-primary {
-      @apply bg-primary-surface border border-primary-border text-primary-main;
+      @apply bg-blue-10 border border-blue-75 text-blue-400;
     }
 
     &-danger {
-      @apply bg-danger-surface border border-danger-border text-danger-main;
+      @apply bg-danger-150 border border-danger-400 text-danger-750;
     }
 
     &-warning {
-      @apply bg-warning-surface border border-warning-border text-danger-400;
+      @apply bg-warning-50 border border-warning-75 text-warning-500;
     }
 
     &-success {
-      @apply bg-success-surface border border-success-border text-success-main;
+      @apply bg-success-40 border border-success-300 text-success-400;
     }
 
     &-info {

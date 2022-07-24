@@ -1,14 +1,28 @@
 // @layer components {
-  .select {
-    @apply relative text-l-rg flex flex-1;
+
+  // upper selector
+
+  .input-group {
+    &.select &__wrap {
+      max-width: 100%
+    }
+   
+  }
+
+  .js-select {
+    @apply relative text-l-rg flex flex-1 max-w-full;
 
     select {
       display: none;
     }
   
     &__opener {
-      @apply py-2 px-3 flex flex-1 items-center border border-neutral-40 rounded outline-none bg-neutral-0 pr-8 shadow-1 relative  text-neutral-700; 
+      @apply py-2 px-3 flex flex-1 items-center border border-neutral-40 rounded outline-none bg-neutral-0 pr-8 shadow-1 relative  text-neutral-700 max-w-full; 
       
+      span {
+        @apply overflow-hidden whitespace-nowrap;
+      }
+
       &.plug {
         @apply text-neutral-60;
       }
@@ -21,21 +35,23 @@
   
       // states
   
-      &:not(.disabled) {
-        @apply hover:border-blue-400 hover:cursor-pointer;
-        @apply focus:outline-3 focus:outline-blue-50 focus:outline-offset-0;
-      }
+      
   
       &:disabled>.helper-text {
         @apply text-neutral-50;
       }
-  
-  
     }
-    
+
+    &:not(.open) &__opener {
+      &:not(.disabled) {
+        @apply hover:border-blue-400 hover:cursor-pointer;
+        @apply focus:outline-3 focus:outline-blue-50 focus:outline-offset-0;
+      }
+    }
+
     &__panel {
       @apply absolute left-0 right-0 border border-neutral-30 rounded bg-neutral-0 shadow-2 hidden;
-      top: 38px;
+      top: 100%;
     }
   
     &.open &__panel {
@@ -49,9 +65,7 @@
     &__option.focused:not(:active):not(:hover):not(.selected) {
       @apply bg-neutral-10 cursor-pointer outline outline-blue-50 outline-offset-0;
     }
-    // &__option:focus {
-    //   @apply bg-neutral-10 cursor-pointer outline outline-blue-50 outline-offset-0;
-    // }
+ 
     &__option:hover {
       @apply bg-neutral-10 cursor-pointer outline-none;
     }

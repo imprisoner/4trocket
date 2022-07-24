@@ -1,7 +1,11 @@
 @layer components {
   .pg {
     @apply p-4 bg-neutral-0 border border-neutral-30 flex justify-between items-center;
-  
+    
+    .btn {
+      @apply h-8;
+    }
+
     &__quantity {
       @apply flex items-end text-l-rg text-neutral-700;
   

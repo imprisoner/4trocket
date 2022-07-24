@@ -1,5 +1,5 @@
 @layer base {
-  body.layout-1 {
+  .layout-1 {
     @apply bg-neutral-10 flex items-center justify-center;
 
     .centered-block {
@@ -15,7 +15,7 @@
     }
   }
 
-  body.layout-2 {
+  .layout-2 {
     @apply flex;
 
     .left {
@@ -24,29 +24,52 @@
     }
 
     .menu {
-      @apply bg-neutral-0;
       height: 100vh;
     }
 
     .right {
       @apply flex-1 bg-neutral-10;
-      height: 100vh;
+      // dev
+      // min-height: 100vh;
     }
+
     main {
       @apply pl-6 py-4 pr-4;
-      height: calc(100vh - 178px);
+      height: calc(100vh - 172px);
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      
+      /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
     }
 
     .content {
       @apply w-full flex flex-col p-8 gap-8 bg-neutral-0 border border-neutral-30;
 
-      h2 {
+      h2 {   
         @apply text-heading-l;
       }
     }
+
+    header {
+      @apply pt-4 px-4 pb-6 bg-neutral-0 border border-neutral-30;
+    }
+  
+    header + main {
+      @media (max-width: 1439px) {
+        height: calc(100vh - 228px);
+      }
+    }
+
+    // dev
+
+    // footer {
+    //   @apply absolute bottom-0 right-0 w-full;
+    // }
   }
 
-  .header {
-    @apply pt-4 px-4 pb-6 bg-neutral-0 border border-neutral-30;
-  }
 }
