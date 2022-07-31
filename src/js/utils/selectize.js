@@ -7,7 +7,7 @@ const config = {
   optionClass: 'js-select__option',
   // optgroupClass: 'select__optgroup',
   isSelectedClass: 'selected',
-  hasFocusClass: 'focused',
+  hasFocusClass: 'focus',
   isDisabledClass: 'disabled',
   isOpenClass: 'open'
 }

@@ -4,6 +4,7 @@
 @import './global/_utils.scss';
 @import './global/_mixins.scss';
 @import './global/_grid.scss';
+@import './global/_animations.scss';
 // components
 @import './components/buttons.scss';
 @import './components/inputs.scss';
@@ -23,12 +24,15 @@
 @import './components/accordion.scss';
 @import './components/tabs.scss';
 @import './components/radio.scss';
+@import './components/tooltip.scss';
+@import './components/switch.scss';
+@import './components/dropdown.scss';
+
+// blocks
+@import './blocks/order-modal.scss';
 
 // pages
 @import './pages/guideline.scss';
-
-// test
-@import './global/_dev.scss';
 
 @tailwind base;
 @tailwind components;
@@ -62,4 +66,3 @@
     letter-spacing: -0.017em;
   }
 }
-

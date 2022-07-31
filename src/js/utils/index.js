@@ -1,3 +1,4 @@
+export {default as events} from './customEvents'
 export {default as menu} from './menu'
 export {default as Modal} from './modal'
 export {default as clickOutside} from './clickOutside'
@@ -6,3 +7,6 @@ export {default as accordion} from './accordion'
 export {default as tabs} from './tabs'
 // vendor === custom select
 export {default as selectize} from './selectize'
+export {default as checkboxTree} from './checkboxTree'
+export {default as disableTableCheckboxes} from './disableTableCheckboxes'
+export {default as Dropdown} from './dropdown'

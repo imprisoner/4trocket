@@ -2,7 +2,7 @@
 
   .input-group {
     @apply flex flex-col gap-1;
-
+    
     &__label-text {
       @apply text-m-rg text-neutral-700;
     }
@@ -34,36 +34,8 @@
       }
     }
 
-    // DATE INPUT
-    // input[type=date] {
-    //   @apply cursor-text text-neutral-10;
-    //   &::-webkit-calendar-picker-indicator {
-    //     display: none;
-    //     -webkit-appearance: none;
-    //   }
-
-    //   &::before {
-    //     @apply absolute text-neutral-60;
-    //     content: attr(placeholder);
-
-    //     // margin-right: 0.5em;
-    //   }
-
-    //   &:focus {
-    //     // @apply text-neutral-700;
-
-    //     &::before{
-    //       content: none;
-    //     }
-    //   }
-
-    // }
-
     // TEXTFIELD
-    &.textfield &__helper-text {
-      @apply hidden;
-    }
-
+    
     &.textfield &__wrap {
       @apply relative flex;
 
@@ -132,6 +104,14 @@
       }
     }
 
+    &.disabled &__view {
+      @apply border-neutral-30 hover:cursor-default;
+    }
+
+    &.disabled &__label-text, &.disabled &__helper-text {
+      @apply text-neutral-50;
+    }
+    
     &.error.disabled {
       input {
         @apply border-danger-750;
@@ -144,5 +124,4 @@
       }
     }
   }
-
 }

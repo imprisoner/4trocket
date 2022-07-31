@@ -1,0 +1,41 @@
+// dropdown fade-in animation
+
+@-webkit-keyframes smoothFade {
+  0% {
+    @apply opacity-0;
+  }
+
+  100% {
+    @apply flex opacity-100;
+  }
+}
+
+@-moz-keyframes smoothFade {
+  0% {
+    @apply opacity-0;
+  }
+
+  100% {
+    @apply flex opacity-100;
+  }
+}
+
+@-o-keyframes smoothFade {
+  0% {
+    @apply opacity-0;
+  }
+
+  100% {
+    @apply flex opacity-100;
+  }
+}
+
+@keyframes smoothFade {
+  0% {
+    @apply opacity-0;
+  }
+
+  100% {
+    @apply flex opacity-100;
+  }
+}

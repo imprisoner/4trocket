@@ -1,10 +1,17 @@
 .card {
   @apply flex flex-col rounded shadow-1 border border-neutral-30;
+  @apply hover:border-blue-400;
   width: 282px;
+
+  &:focus-visible {
+    @apply focused;
+  }
 
   &__img {
     @apply w-full;
+    border-radius: .25rem .25rem 0 0;
     height: 190px;
+    object-fit: cover;
   }
 
   &__body {
@@ -19,7 +26,7 @@
     @apply mb-4 text-m-rg text-neutral-70;
   }
 
-  &__bottom p{
+  &__bottom p {
     @apply text-s-rg text-neutral-60;
   }
 }

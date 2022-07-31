@@ -10,6 +10,59 @@
 </head>
 
 <body class="layout-2" id="guideline">
+  <!-- modals -->
+  <div class="modal modal-danger">
+    <div class="modal__dialog">
+      <div class="modal__top">
+        <div class="modal__status-icon">
+          <div class="icon-l">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2.25C10.0716 2.25 8.18657 2.82183 6.58319 3.89317C4.97982 4.96451 3.73013 6.48726 2.99218 8.26884C2.25422 10.0504 2.06114 12.0108 2.43735 13.9021C2.81355 15.7934 3.74215 17.5307 5.10571 18.8943C6.46928 20.2579 8.20656 21.1865 10.0979 21.5627C11.9892 21.9389 13.9496 21.7458 15.7312 21.0078C17.5127 20.2699 19.0355 19.0202 20.1068 17.4168C21.1782 15.8134 21.75 13.9284 21.75 12C21.7471 9.41503 20.7189 6.93678 18.8911 5.10893C17.0632 3.28108 14.585 2.25292 12 2.25ZM11.25 7.5C11.25 7.30109 11.329 7.11032 11.4697 6.96967C11.6103 6.82902 11.8011 6.75 12 6.75C12.1989 6.75 12.3897 6.82902 12.5303 6.96967C12.671 7.11032 12.75 7.30109 12.75 7.5V12.75C12.75 12.9489 12.671 13.1397 12.5303 13.2803C12.3897 13.421 12.1989 13.5 12 13.5C11.8011 13.5 11.6103 13.421 11.4697 13.2803C11.329 13.1397 11.25 12.9489 11.25 12.75V7.5ZM12 17.25C11.7775 17.25 11.56 17.184 11.375 17.0604C11.19 16.9368 11.0458 16.7611 10.9606 16.5555C10.8755 16.35 10.8532 16.1238 10.8966 15.9055C10.94 15.6873 11.0472 15.4868 11.2045 15.3295C11.3618 15.1722 11.5623 15.065 11.7805 15.0216C11.9988 14.9782 12.225 15.0005 12.4305 15.0856C12.6361 15.1708 12.8118 15.315 12.9354 15.5C13.059 15.685 13.125 15.9025 13.125 16.125C13.125 16.4234 13.0065 16.7095 12.7955 16.9205C12.5845 17.1315 12.2984 17.25 12 17.25Z"
+                fill="#97A0AF" />
+            </svg>
+          </div>
+        </div>
+        <div class="modal__text">
+          <span>
+            Вы точно хотите удалить ключ?
+          </span>
+        </div>
+        <div class="modal__close">
+        </div>
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn-danger" id="delete">Удалить ключ</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal-primary">
+    <div class="modal__dialog">
+      <div class="modal__top">
+        <div class="modal__status-icon">
+          <div class="icon-l">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2.25C10.0716 2.25 8.18657 2.82183 6.58319 3.89317C4.97982 4.96451 3.73013 6.48726 2.99218 8.26884C2.25422 10.0504 2.06114 12.0108 2.43735 13.9021C2.81355 15.7934 3.74215 17.5307 5.10571 18.8943C6.46928 20.2579 8.20656 21.1865 10.0979 21.5627C11.9892 21.9389 13.9496 21.7458 15.7312 21.0078C17.5127 20.2699 19.0355 19.0202 20.1068 17.4168C21.1782 15.8134 21.75 13.9284 21.75 12C21.7471 9.41503 20.7189 6.93678 18.8911 5.10893C17.0632 3.28108 14.585 2.25292 12 2.25ZM11.25 7.5C11.25 7.30109 11.329 7.11032 11.4697 6.96967C11.6103 6.82902 11.8011 6.75 12 6.75C12.1989 6.75 12.3897 6.82902 12.5303 6.96967C12.671 7.11032 12.75 7.30109 12.75 7.5V12.75C12.75 12.9489 12.671 13.1397 12.5303 13.2803C12.3897 13.421 12.1989 13.5 12 13.5C11.8011 13.5 11.6103 13.421 11.4697 13.2803C11.329 13.1397 11.25 12.9489 11.25 12.75V7.5ZM12 17.25C11.7775 17.25 11.56 17.184 11.375 17.0604C11.19 16.9368 11.0458 16.7611 10.9606 16.5555C10.8755 16.35 10.8532 16.1238 10.8966 15.9055C10.94 15.6873 11.0472 15.4868 11.2045 15.3295C11.3618 15.1722 11.5623 15.065 11.7805 15.0216C11.9988 14.9782 12.225 15.0005 12.4305 15.0856C12.6361 15.1708 12.8118 15.315 12.9354 15.5C13.059 15.685 13.125 15.9025 13.125 16.125C13.125 16.4234 13.0065 16.7095 12.7955 16.9205C12.5845 17.1315 12.2984 17.25 12 17.25Z"
+                fill="#97A0AF" />
+            </svg>
+          </div>
+        </div>
+        <div class="modal__text">
+          <span>
+            Вы точно хотите удалить ключ?
+          </span>
+        </div>
+        <div class="modal__close">
+        </div>
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn-primary">Удалить ключ</button>
+        <button class="btn btn-outlined">Отмена</button>
+      </div>
+    </div>
+  </div>
+  <!--  -->
   <aside class="left">
     <nav class="menu bg-neutral-0">
       <div class="menu__top">
@@ -62,6 +115,15 @@
             <div class="menu-item__text">
               <span>
                 Input
+              </span>
+            </div>
+          </div>
+        </a>
+        <a href="" class="menu-item" data-section="select">
+          <div class="menu-item__wrapper">
+            <div class="menu-item__text">
+              <span>
+                Select
               </span>
             </div>
           </div>
@@ -129,9 +191,27 @@
             </div>
           </div>
         </a>
+        <a href="" class="menu-item" data-section="tooltip">
+          <div class="menu-item__wrapper">
+            <div class="menu-item__text">
+              <span>
+                Tooltip
+              </span>
+            </div>
+          </div>
+        </a>
+        <a href="" class="menu-item" data-section="switch">
+          <div class="menu-item__wrapper">
+            <div class="menu-item__text">
+              <span>
+                Switch
+              </span>
+            </div>
+          </div>
+        </a>
 
         <div class="menu-item submenu">
-          <div class="menu-item__wrapper submenu__trigger">
+          <button type="button" class="menu-item__wrapper submenu__trigger">
             <div class="menu-item__icon">
               <div class="icon-m">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,7 +229,7 @@
             </div>
             <div class="menu-item__text">
               <span>
-                Настройки
+                Menu Dropdown
               </span>
             </div>
             <div class="menu-item__caret">
@@ -161,22 +241,22 @@
                 </svg>
               </div>
             </div>
-          </div>
+          </button>
           <div class="submenu__dropdown">
-            <a href="#" class="menu-item">
+            <a href="#" class="menu-item"  id="mt_primary">
               <div class="menu-item__wrapper">
                 <div class="menu-item__text">
                   <span>
-                    Настройки API
+                    modal-primary
                   </span>
                 </div>
               </div>
             </a>
-            <a href="#" class="menu-item">
+            <a href="#" class="menu-item"  id="mt_danger">
               <div class="menu-item__wrapper">
                 <div class="menu-item__text">
                   <span>
-                    Организация
+                    modal-danger
                   </span>
                 </div>
               </div>
@@ -222,9 +302,9 @@
       </nav>
   </aside>
   <div class="right">
-    <main>
+    <main class="min-h-full">
       <h2 class="text-heading-l text-neutral-700 mb-4">Имя страницы</h2>
-      <div class="content min-h-full">
+      <div class="content">
         <section class="buttons flex flex-col" data-section="button">
           <h3 class="text-heading-m text-neutral-700 mb-4">Primary</h3>
           <section class="primary flex items-center justify-between mb-4">
@@ -348,7 +428,7 @@
           </section>
           <h3 class="text-heading-m text-neutral-700 mb-4">Text</h3>
           <section class="text flex items-center justify-between mb-4">
-            <button class="btn btn-text">Text</button>
+            <a href="#" class="btn btn-text">Text</a>
             <a href="#" class="btn btn-text">
               <div class="btn__icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -362,7 +442,7 @@
               </div>
               With icon
             </a>
-            <button class="btn btn-text btn-icon">
+            <a href="#" class="btn btn-text btn-icon">
               <div class="btn__icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -373,8 +453,8 @@
                     fill="#97A0AF" />
                 </svg>
               </div>
-            </button>
-            <a class="btn btn-text disabled">Disabled</a>
+            </a>
+            <a href="#" class="btn btn-text disabled">Disabled</a>
           </section>
         </section>
         <section class="badges flex flex-col gap-4" data-section="badge">
@@ -405,12 +485,12 @@
             </div>
             <span class="input-group__helper-text">Helper text</span>
           </label>
-          <label class="input-group">
-            <div class="input-group__label-text">Date input</div>
+          <label class="input-group textfield disabled">
+            <div class="input-group__label-text">Disabled</div>
             <div class="input-group__wrap">
-              <input type="date" />
-              <span class="input-group__icon"></span>
+              <input type="text" placeholder="Placeholder" disabled />
             </div>
+            <span class="input-group__helper-text">Helper text</span>
           </label>
           <label class="input-group">
             <span class="input-group__label-text">Label text</span>
@@ -420,37 +500,205 @@
             <span class="input-group__helper-text">Helper text</span>
           </label>
         </section>
-        <section class="checkboxes" data-section="checkbox">
-          <label class="cb">
-            <input type="checkbox" checked />
-            <div class="cb__view"></div>
-            <!-- <span class="cb__label-text">Checkbox</span> -->
-          </label>
-          <label class="cb">
-            <input type="checkbox" checked disabled />
-            <div class="cb__view"></div>
-            <!-- <span class="cb__label-text">Checkbox</span> -->
-          </label>
+        <section class="selects flex flex-col gap-8" data-section="select">
+          <div class="w-80">
+            <label class="input-group">
+              <div class="input-group__label-text">Статус</div>
+              <div class="input-group__wrap">
+                <select name="" id="select">
+                  <option value="">Disabled</option>
+                  <option value="1">Option1</option>
+                  <option value="2">Option2</option>
+                  <option value="3">Option3</option>
+                  <option value="4">Option4</option>
+                  <option value="5">Option5</option>
+                </select>
+              </div>
+            </label>
+          </div>
+          <div class="w-80">
+            <label class="input-group disabled">
+              <div class="input-group__label-text">Статус</div>
+              <div class="input-group__wrap">
+                <select name="" id="select">
+                  <option value="">Disabled</option>
+                  <option value="1">Option1</option>
+                  <option value="2">Option2</option>
+                  <option value="3">Option3</option>
+                  <option value="4">Option4</option>
+                  <option value="5">Option5</option>
+                </select>
+              </div>
+              <span class="input-group__helper-text">Helper text</span>
+            </label>
+          </div>
         </section>
-        <section class="radio flex flex-col gap-4" p-8 bg-neutral-10" data-section="radio" style="display: flex">
+        <section class="checkboxes" data-section="checkbox">
+          <div class="">
+            <table class="table table-hover" id="my_table">
+              <thead>
+                <tr>
+                  <th>
+                    <label class="cb">
+                      <input type="checkbox" />
+                      <div class="cb__view"></div>
+                    </label>
+                  </th>
+                  <th>
+                    Name
+                    <div class="table__btn-iconic">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M11.4694 17.7797C11.487 17.7973 11.5055 17.814 11.5248 17.8298C11.5328 17.8363 11.5413 17.842 11.5495 17.8482C11.5608 17.8568 11.5719 17.8655 11.5837 17.8734C11.594 17.8803 11.6046 17.8862 11.6151 17.8925C11.6256 17.8988 11.6358 17.9053 11.6466 17.9111C11.6575 17.9169 11.6687 17.9219 11.6798 17.9271C11.6909 17.9323 11.7018 17.9378 11.7131 17.9425C11.7239 17.947 11.7349 17.9506 11.7459 17.9546C11.7581 17.9589 11.77 17.9636 11.7824 17.9673C11.7934 17.9707 11.8046 17.9731 11.8157 17.9759C11.8283 17.9791 11.8407 17.9826 11.8535 17.9851C11.8666 17.9877 11.8797 17.9892 11.8929 17.9911C11.904 17.9927 11.9148 17.9948 11.926 17.9959C11.9506 17.9983 11.9753 17.9996 12 17.9996C12.0247 17.9996 12.0494 17.9983 12.074 17.9959C12.0852 17.9948 12.096 17.9927 12.1071 17.9911C12.1202 17.9892 12.1334 17.9877 12.1465 17.9851C12.1593 17.9826 12.1717 17.9791 12.1842 17.9759C12.1954 17.9731 12.2065 17.9707 12.2176 17.9673C12.23 17.9636 12.2419 17.9589 12.254 17.9546C12.265 17.9506 12.2761 17.947 12.2869 17.9425C12.2982 17.9378 12.3091 17.9323 12.3201 17.9271C12.3313 17.9219 12.3425 17.9169 12.3534 17.9111C12.3641 17.9053 12.3744 17.8988 12.3848 17.8925C12.3954 17.8862 12.406 17.8803 12.4162 17.8734C12.428 17.8655 12.4392 17.8568 12.4505 17.8482C12.4587 17.842 12.4672 17.8363 12.4752 17.8298C12.4945 17.814 12.513 17.7973 12.5306 17.7797L19.2803 11.03C19.421 10.8893 19.5 10.6985 19.5 10.4996C19.5 10.3007 19.421 10.11 19.2803 9.96931C19.1397 9.82866 18.9489 9.74965 18.75 9.74965C18.5511 9.74965 18.3603 9.82867 18.2197 9.96932L12.75 15.439V2.24963C12.75 2.05072 12.671 1.85996 12.5303 1.7193C12.3897 1.57865 12.1989 1.49963 12 1.49963C11.8011 1.49963 11.6103 1.57865 11.4697 1.7193C11.329 1.85996 11.25 2.05072 11.25 2.24963V15.439L5.7803 9.96932C5.63965 9.82867 5.44889 9.74965 5.24998 9.74965C5.05108 9.74965 4.86032 9.82866 4.71967 9.96931C4.57902 10.11 4.5 10.3007 4.5 10.4996C4.5 10.6985 4.57902 10.8893 4.71967 11.03L11.4694 17.7797Z"
+                          fill="#97A0AF" />
+                        <path
+                          d="M19.5 19.4996H4.5C4.30109 19.4996 4.11032 19.5787 3.96967 19.7193C3.82902 19.86 3.75 20.0507 3.75 20.2496C3.75 20.4485 3.82902 20.6393 3.96967 20.78C4.11032 20.9206 4.30109 20.9996 4.5 20.9996H19.5C19.6989 20.9996 19.8897 20.9206 20.0303 20.78C20.171 20.6393 20.25 20.4485 20.25 20.2496C20.25 20.0507 20.171 19.86 20.0303 19.7193C19.8897 19.5787 19.6989 19.4996 19.5 19.4996Z"
+                          fill="#97A0AF" />
+                      </svg>
+                    </div>
+                  </th>
+                  <th>
+                    Status
+                    <div class="table__btn-iconic">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M11.4694 17.7797C11.487 17.7973 11.5055 17.814 11.5248 17.8298C11.5328 17.8363 11.5413 17.842 11.5495 17.8482C11.5608 17.8568 11.5719 17.8655 11.5837 17.8734C11.594 17.8803 11.6046 17.8862 11.6151 17.8925C11.6256 17.8988 11.6358 17.9053 11.6466 17.9111C11.6575 17.9169 11.6687 17.9219 11.6798 17.9271C11.6909 17.9323 11.7018 17.9378 11.7131 17.9425C11.7239 17.947 11.7349 17.9506 11.7459 17.9546C11.7581 17.9589 11.77 17.9636 11.7824 17.9673C11.7934 17.9707 11.8046 17.9731 11.8157 17.9759C11.8283 17.9791 11.8407 17.9826 11.8535 17.9851C11.8666 17.9877 11.8797 17.9892 11.8929 17.9911C11.904 17.9927 11.9148 17.9948 11.926 17.9959C11.9506 17.9983 11.9753 17.9996 12 17.9996C12.0247 17.9996 12.0494 17.9983 12.074 17.9959C12.0852 17.9948 12.096 17.9927 12.1071 17.9911C12.1202 17.9892 12.1334 17.9877 12.1465 17.9851C12.1593 17.9826 12.1717 17.9791 12.1842 17.9759C12.1954 17.9731 12.2065 17.9707 12.2176 17.9673C12.23 17.9636 12.2419 17.9589 12.254 17.9546C12.265 17.9506 12.2761 17.947 12.2869 17.9425C12.2982 17.9378 12.3091 17.9323 12.3201 17.9271C12.3313 17.9219 12.3425 17.9169 12.3534 17.9111C12.3641 17.9053 12.3744 17.8988 12.3848 17.8925C12.3954 17.8862 12.406 17.8803 12.4162 17.8734C12.428 17.8655 12.4392 17.8568 12.4505 17.8482C12.4587 17.842 12.4672 17.8363 12.4752 17.8298C12.4945 17.814 12.513 17.7973 12.5306 17.7797L19.2803 11.03C19.421 10.8893 19.5 10.6985 19.5 10.4996C19.5 10.3007 19.421 10.11 19.2803 9.96931C19.1397 9.82866 18.9489 9.74965 18.75 9.74965C18.5511 9.74965 18.3603 9.82867 18.2197 9.96932L12.75 15.439V2.24963C12.75 2.05072 12.671 1.85996 12.5303 1.7193C12.3897 1.57865 12.1989 1.49963 12 1.49963C11.8011 1.49963 11.6103 1.57865 11.4697 1.7193C11.329 1.85996 11.25 2.05072 11.25 2.24963V15.439L5.7803 9.96932C5.63965 9.82867 5.44889 9.74965 5.24998 9.74965C5.05108 9.74965 4.86032 9.82866 4.71967 9.96931C4.57902 10.11 4.5 10.3007 4.5 10.4996C4.5 10.6985 4.57902 10.8893 4.71967 11.03L11.4694 17.7797Z"
+                          fill="#97A0AF" />
+                        <path
+                          d="M19.5 19.4996H4.5C4.30109 19.4996 4.11032 19.5787 3.96967 19.7193C3.82902 19.86 3.75 20.0507 3.75 20.2496C3.75 20.4485 3.82902 20.6393 3.96967 20.78C4.11032 20.9206 4.30109 20.9996 4.5 20.9996H19.5C19.6989 20.9996 19.8897 20.9206 20.0303 20.78C20.171 20.6393 20.25 20.4485 20.25 20.2496C20.25 20.0507 20.171 19.86 20.0303 19.7193C19.8897 19.5787 19.6989 19.4996 19.5 19.4996Z"
+                          fill="#97A0AF" />
+                      </svg>
+                    </div>
+                  </th>
+                  <th>
+                    Info
+                    <div class="table__btn-iconic">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M11.4694 17.7797C11.487 17.7973 11.5055 17.814 11.5248 17.8298C11.5328 17.8363 11.5413 17.842 11.5495 17.8482C11.5608 17.8568 11.5719 17.8655 11.5837 17.8734C11.594 17.8803 11.6046 17.8862 11.6151 17.8925C11.6256 17.8988 11.6358 17.9053 11.6466 17.9111C11.6575 17.9169 11.6687 17.9219 11.6798 17.9271C11.6909 17.9323 11.7018 17.9378 11.7131 17.9425C11.7239 17.947 11.7349 17.9506 11.7459 17.9546C11.7581 17.9589 11.77 17.9636 11.7824 17.9673C11.7934 17.9707 11.8046 17.9731 11.8157 17.9759C11.8283 17.9791 11.8407 17.9826 11.8535 17.9851C11.8666 17.9877 11.8797 17.9892 11.8929 17.9911C11.904 17.9927 11.9148 17.9948 11.926 17.9959C11.9506 17.9983 11.9753 17.9996 12 17.9996C12.0247 17.9996 12.0494 17.9983 12.074 17.9959C12.0852 17.9948 12.096 17.9927 12.1071 17.9911C12.1202 17.9892 12.1334 17.9877 12.1465 17.9851C12.1593 17.9826 12.1717 17.9791 12.1842 17.9759C12.1954 17.9731 12.2065 17.9707 12.2176 17.9673C12.23 17.9636 12.2419 17.9589 12.254 17.9546C12.265 17.9506 12.2761 17.947 12.2869 17.9425C12.2982 17.9378 12.3091 17.9323 12.3201 17.9271C12.3313 17.9219 12.3425 17.9169 12.3534 17.9111C12.3641 17.9053 12.3744 17.8988 12.3848 17.8925C12.3954 17.8862 12.406 17.8803 12.4162 17.8734C12.428 17.8655 12.4392 17.8568 12.4505 17.8482C12.4587 17.842 12.4672 17.8363 12.4752 17.8298C12.4945 17.814 12.513 17.7973 12.5306 17.7797L19.2803 11.03C19.421 10.8893 19.5 10.6985 19.5 10.4996C19.5 10.3007 19.421 10.11 19.2803 9.96931C19.1397 9.82866 18.9489 9.74965 18.75 9.74965C18.5511 9.74965 18.3603 9.82867 18.2197 9.96932L12.75 15.439V2.24963C12.75 2.05072 12.671 1.85996 12.5303 1.7193C12.3897 1.57865 12.1989 1.49963 12 1.49963C11.8011 1.49963 11.6103 1.57865 11.4697 1.7193C11.329 1.85996 11.25 2.05072 11.25 2.24963V15.439L5.7803 9.96932C5.63965 9.82867 5.44889 9.74965 5.24998 9.74965C5.05108 9.74965 4.86032 9.82866 4.71967 9.96931C4.57902 10.11 4.5 10.3007 4.5 10.4996C4.5 10.6985 4.57902 10.8893 4.71967 11.03L11.4694 17.7797Z"
+                          fill="#97A0AF" />
+                        <path
+                          d="M19.5 19.4996H4.5C4.30109 19.4996 4.11032 19.5787 3.96967 19.7193C3.82902 19.86 3.75 20.0507 3.75 20.2496C3.75 20.4485 3.82902 20.6393 3.96967 20.78C4.11032 20.9206 4.30109 20.9996 4.5 20.9996H19.5C19.6989 20.9996 19.8897 20.9206 20.0303 20.78C20.171 20.6393 20.25 20.4485 20.25 20.2496C20.25 20.0507 20.171 19.86 20.0303 19.7193C19.8897 19.5787 19.6989 19.4996 19.5 19.4996Z"
+                          fill="#97A0AF" />
+                      </svg>
+                    </div>
+                  </th>
+                  <th>
+                    Additional
+                    <div class="table__btn-iconic">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M11.4694 17.7797C11.487 17.7973 11.5055 17.814 11.5248 17.8298C11.5328 17.8363 11.5413 17.842 11.5495 17.8482C11.5608 17.8568 11.5719 17.8655 11.5837 17.8734C11.594 17.8803 11.6046 17.8862 11.6151 17.8925C11.6256 17.8988 11.6358 17.9053 11.6466 17.9111C11.6575 17.9169 11.6687 17.9219 11.6798 17.9271C11.6909 17.9323 11.7018 17.9378 11.7131 17.9425C11.7239 17.947 11.7349 17.9506 11.7459 17.9546C11.7581 17.9589 11.77 17.9636 11.7824 17.9673C11.7934 17.9707 11.8046 17.9731 11.8157 17.9759C11.8283 17.9791 11.8407 17.9826 11.8535 17.9851C11.8666 17.9877 11.8797 17.9892 11.8929 17.9911C11.904 17.9927 11.9148 17.9948 11.926 17.9959C11.9506 17.9983 11.9753 17.9996 12 17.9996C12.0247 17.9996 12.0494 17.9983 12.074 17.9959C12.0852 17.9948 12.096 17.9927 12.1071 17.9911C12.1202 17.9892 12.1334 17.9877 12.1465 17.9851C12.1593 17.9826 12.1717 17.9791 12.1842 17.9759C12.1954 17.9731 12.2065 17.9707 12.2176 17.9673C12.23 17.9636 12.2419 17.9589 12.254 17.9546C12.265 17.9506 12.2761 17.947 12.2869 17.9425C12.2982 17.9378 12.3091 17.9323 12.3201 17.9271C12.3313 17.9219 12.3425 17.9169 12.3534 17.9111C12.3641 17.9053 12.3744 17.8988 12.3848 17.8925C12.3954 17.8862 12.406 17.8803 12.4162 17.8734C12.428 17.8655 12.4392 17.8568 12.4505 17.8482C12.4587 17.842 12.4672 17.8363 12.4752 17.8298C12.4945 17.814 12.513 17.7973 12.5306 17.7797L19.2803 11.03C19.421 10.8893 19.5 10.6985 19.5 10.4996C19.5 10.3007 19.421 10.11 19.2803 9.96931C19.1397 9.82866 18.9489 9.74965 18.75 9.74965C18.5511 9.74965 18.3603 9.82867 18.2197 9.96932L12.75 15.439V2.24963C12.75 2.05072 12.671 1.85996 12.5303 1.7193C12.3897 1.57865 12.1989 1.49963 12 1.49963C11.8011 1.49963 11.6103 1.57865 11.4697 1.7193C11.329 1.85996 11.25 2.05072 11.25 2.24963V15.439L5.7803 9.96932C5.63965 9.82867 5.44889 9.74965 5.24998 9.74965C5.05108 9.74965 4.86032 9.82866 4.71967 9.96931C4.57902 10.11 4.5 10.3007 4.5 10.4996C4.5 10.6985 4.57902 10.8893 4.71967 11.03L11.4694 17.7797Z"
+                          fill="#97A0AF" />
+                        <path
+                          d="M19.5 19.4996H4.5C4.30109 19.4996 4.11032 19.5787 3.96967 19.7193C3.82902 19.86 3.75 20.0507 3.75 20.2496C3.75 20.4485 3.82902 20.6393 3.96967 20.78C4.11032 20.9206 4.30109 20.9996 4.5 20.9996H19.5C19.6989 20.9996 19.8897 20.9206 20.0303 20.78C20.171 20.6393 20.25 20.4485 20.25 20.2496C20.25 20.0507 20.171 19.86 20.0303 19.7193C19.8897 19.5787 19.6989 19.4996 19.5 19.4996Z"
+                          fill="#97A0AF" />
+                      </svg>
+                    </div>
+                  </th>
+                  <th>
+                    Action
+                    <div class="table__btn-iconic">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M11.4694 17.7797C11.487 17.7973 11.5055 17.814 11.5248 17.8298C11.5328 17.8363 11.5413 17.842 11.5495 17.8482C11.5608 17.8568 11.5719 17.8655 11.5837 17.8734C11.594 17.8803 11.6046 17.8862 11.6151 17.8925C11.6256 17.8988 11.6358 17.9053 11.6466 17.9111C11.6575 17.9169 11.6687 17.9219 11.6798 17.9271C11.6909 17.9323 11.7018 17.9378 11.7131 17.9425C11.7239 17.947 11.7349 17.9506 11.7459 17.9546C11.7581 17.9589 11.77 17.9636 11.7824 17.9673C11.7934 17.9707 11.8046 17.9731 11.8157 17.9759C11.8283 17.9791 11.8407 17.9826 11.8535 17.9851C11.8666 17.9877 11.8797 17.9892 11.8929 17.9911C11.904 17.9927 11.9148 17.9948 11.926 17.9959C11.9506 17.9983 11.9753 17.9996 12 17.9996C12.0247 17.9996 12.0494 17.9983 12.074 17.9959C12.0852 17.9948 12.096 17.9927 12.1071 17.9911C12.1202 17.9892 12.1334 17.9877 12.1465 17.9851C12.1593 17.9826 12.1717 17.9791 12.1842 17.9759C12.1954 17.9731 12.2065 17.9707 12.2176 17.9673C12.23 17.9636 12.2419 17.9589 12.254 17.9546C12.265 17.9506 12.2761 17.947 12.2869 17.9425C12.2982 17.9378 12.3091 17.9323 12.3201 17.9271C12.3313 17.9219 12.3425 17.9169 12.3534 17.9111C12.3641 17.9053 12.3744 17.8988 12.3848 17.8925C12.3954 17.8862 12.406 17.8803 12.4162 17.8734C12.428 17.8655 12.4392 17.8568 12.4505 17.8482C12.4587 17.842 12.4672 17.8363 12.4752 17.8298C12.4945 17.814 12.513 17.7973 12.5306 17.7797L19.2803 11.03C19.421 10.8893 19.5 10.6985 19.5 10.4996C19.5 10.3007 19.421 10.11 19.2803 9.96931C19.1397 9.82866 18.9489 9.74965 18.75 9.74965C18.5511 9.74965 18.3603 9.82867 18.2197 9.96932L12.75 15.439V2.24963C12.75 2.05072 12.671 1.85996 12.5303 1.7193C12.3897 1.57865 12.1989 1.49963 12 1.49963C11.8011 1.49963 11.6103 1.57865 11.4697 1.7193C11.329 1.85996 11.25 2.05072 11.25 2.24963V15.439L5.7803 9.96932C5.63965 9.82867 5.44889 9.74965 5.24998 9.74965C5.05108 9.74965 4.86032 9.82866 4.71967 9.96931C4.57902 10.11 4.5 10.3007 4.5 10.4996C4.5 10.6985 4.57902 10.8893 4.71967 11.03L11.4694 17.7797Z"
+                          fill="#97A0AF" />
+                        <path
+                          d="M19.5 19.4996H4.5C4.30109 19.4996 4.11032 19.5787 3.96967 19.7193C3.82902 19.86 3.75 20.0507 3.75 20.2496C3.75 20.4485 3.82902 20.6393 3.96967 20.78C4.11032 20.9206 4.30109 20.9996 4.5 20.9996H19.5C19.6989 20.9996 19.8897 20.9206 20.0303 20.78C20.171 20.6393 20.25 20.4485 20.25 20.2496C20.25 20.0507 20.171 19.86 20.0303 19.7193C19.8897 19.5787 19.6989 19.4996 19.5 19.4996Z"
+                          fill="#97A0AF" />
+                      </svg>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <label class="cb">
+                      <input type="checkbox" checked />
+                      <div class="cb__view"></div>
+                    </label>
+                  </td>
+                  <td>Table row</td>
+                  <td>
+                    <div class="badge badge-warning">Badge</div>
+                  </td>
+                  <td>Table row</td>
+                  <td>Table row</td>
+                  <td class="table__action"><a>Action</a></td>
+                </tr>
+                <!--  -->
+                <tr class="">
+                  <td>
+                    <label class="cb">
+                      <input type="checkbox" checked />
+                      <div class="cb__view"></div>
+                    </label>
+                  </td>
+                  <td>Table row</td>
+                  <td>
+                    <div class="badge badge-warning">Badge</div>
+                  </td>
+                  <td>Table row</td>
+                  <td>Table row</td>
+                  <td class="table__action"><a>Action</a></td>
+                </tr>
+                <!--  -->
+                <tr>
+                  <td>
+                    <label class="cb">
+                      <input type="checkbox" />
+                      <div class="cb__view"></div>
+                    </label>
+                  </td>
+                  <td>Table row</td>
+                  <td>
+                    <div class="badge badge-warning">Badge</div>
+                  </td>
+                  <td>Table row</td>
+                  <td>Table row</td>
+                  <td class="table__action"><a>Action</a></td>
+                </tr>
+                <!--  -->
+                <tr>
+                  <td>
+                    <label class="cb">
+                      <input type="checkbox" checked />
+                      <div class="cb__view"></div>
+                    </label>
+                  </td>
+                  <td>Table row</td>
+                  <td>
+                    <div class="badge badge-warning">Badge</div>
+                  </td>
+                  <td>Table row</td>
+                  <td>Table row</td>
+                  <td class="table__action"><a>Action</a></td>
+                </tr>
+                <!--  -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section class="radio flex flex-col gap-4" p-8 bg-neutral-10" data-section="radio">
           <label class="radio">
-            <input type="checkbox"/>
+            <input type="radio" value="radio1" name="test" />
             <div class="radio__view"></div>
             <span class="radio__label-text">Radio label</span>
-          </label> 
+          </label>
           <label class="radio">
-            <input type="checkbox" disabled/>
+            <input type="radio" value="radio2" name="test" />
             <div class="radio__view"></div>
             <span class="radio__label-text">Radio label</span>
-          </label> 
+          </label>
           <label class="radio">
-            <input type="checkbox" disabled checked/>
+            <input type="radio" checked value="radio3" name="test" />
             <div class="radio__view"></div>
             <span class="radio__label-text">Radio label</span>
-          </label> 
+          </label>
         </section>
         <section class="cards" data-section="card">
-          <div class="card">
+          <a href="#" div class="card">
             <img src="assets/images/card_image.jpg" alt="" class="card__img" />
             <div class="card__body">
               <h4 class="card__title">Card label</h4>
@@ -462,7 +710,7 @@
                 </p>
               </div>
             </div>
-          </div>
+          </a>
         </section>
         <section class="notifications flex flex-col gap-4" data-section="notification">
           <div class="nf nf-danger">
@@ -560,6 +808,25 @@
             </li>
           </ul>
         </section>
+        <section class="dropdowns p-8 bg-neutral-10 flex-col gap-8" data-section="dropdown" style="display: flex">
+          <div class="w-40">
+            <div class="dd">
+              <button class="dd-item dd__trigger">Dropdown</button>
+              <div class="dd__panel panel">
+                <a href="#" class="dd-item">Dropdown Option</a>
+                <a href="#" class="dd-item">Dropdown Option</a>
+                <a href="#" class="dd-item">Dropdown Option</a>
+                <a href="#" class="dd-item">Dropdown Option</a>
+                <a href="#" class="dd-item">Dropdown Option</a>
+                <a href="#" class="dd-item disabled">Dropdown Option</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <button class="btn btn-danger" id="disable_dropdown">Disable dropdown</button>
+            <button class="btn btn-primary" id="init_dropdown">Enable dropdown</button>
+          </div>
+        </section>
         <section class="tabs-demo p-8 bg-neutral-10" data-section="tabs">
           <ul class="tabs">
             <li class="tabs__item"><a href="">Tab Item</a></li>
@@ -569,9 +836,39 @@
             <li class="tabs__item"><a href="">Tab Item</a></li>
           </ul>
         </section>
+        <section class="tooltips" data-section="tooltip">
+          <div class="tooltip">
+            <div class="tooltip__trigger">Tooltip Trigger</div>
+            <div class="tooltip__content">Assertively deploy resource maximizing supply chains rather than highly
+              efficient information. Progressively leverage other's installed base resources whereas tactical web-re.
+            </div>
+          </div>
+        </section>
+        <section class="switch flex gap-8" data-section="switch">
+          <label class="switch">
+            <input type="checkbox" name="" id="">
+            <div class="switch__view">
+              <div class="switch__indicator"></div>
+            </div>
+            <span class="switch__label-text">Switch</span>
+          </label>
+          <label class="switch">
+            <input type="checkbox" name="" id="" disabled>
+            <div class="switch__view">
+              <div class="switch__indicator"></div>
+            </div>
+            <span class="switch__label-text">Disabled</span>
+          </label>
+          <label class="switch">
+            <input type="checkbox" name="" id="" disabled checked>
+            <div class="switch__view">
+              <div class="switch__indicator"></div>
+            </div>
+            <span class="switch__label-text">Disabled Checked</span>
+          </label>
+        </section>
       </div>
     </main>
-    <footer></footer>
   </div>
   <script src="./js/utils.js"></script>
   <script src="./js/guideline.js"></script>

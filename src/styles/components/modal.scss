@@ -3,7 +3,7 @@
 
 
   .modal {
-    @apply absolute top-0 right-0 bottom-0 left-0 z-10 hidden;
+    @apply fixed top-0 right-0 bottom-0 left-0 z-10 hidden;
     background: rgba(0, 0, 0, 0.4);
 
     &.open {
@@ -24,36 +24,32 @@
       @apply flex items-center gap-2;
     }
 
-    &__top &__status-icon {
+    // &__top &__status-icon {
       // display: none;
-    }
+    // }
 
     &__top &__title {
       @apply text-heading-s flex-1;
     }
 
-    &__top &__close {
-      @apply ml-auto cursor-pointer bg-neutral-60 icon-m;
+    &__close {
+      @apply ml-auto cursor-pointer bg-neutral-60 icon-m icon-close;
     }
 
     &__actions {
       @apply px-0 pt-4 pb-0 flex items-end gap-2;
     }
 
-    &__close {
-      @apply icon-close icon-m;
-    }
+    // &__close {
+    //   @apply icon-m;
+    // }
     // states
 
     &-danger &__status-icon {
-      svg path {
-        @apply fill-danger-750;
-      }
+      @include icon-svg(fill-danger-750);
     }
     &-primary &__status-icon {
-      svg path {
-        @apply fill-blue-400;
-      }
+      @include icon-svg(fill-blue-400);
     }
   }
 }

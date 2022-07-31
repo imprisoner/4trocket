@@ -1,9 +1,32 @@
 @layer base {
+
+  // Chrome scrollbar
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  
+  html * {
+    // Firefox scrollbar
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+  }
+  
+
   .layout-1 {
     @apply bg-neutral-10 flex items-center justify-center;
 
     .centered-block {
       @apply flex flex-col shadow-1 items-center gap-8 bg-neutral-0 border border-neutral-150 p-15;
+      max-width: 600px;
 
       h1 {
         @apply text-neutral-700 text-center;
@@ -29,47 +52,34 @@
 
     .right {
       @apply flex-1 bg-neutral-10;
-      // dev
-      // min-height: 100vh;
+      min-width: 1000px;
     }
 
     main {
       @apply pl-6 py-4 pr-4;
-      height: calc(100vh - 172px);
       overflow-y: scroll;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
-      
-      /* Hide scrollbar for IE, Edge and Firefox */
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
     }
-
+    
     .content {
       @apply w-full flex flex-col p-8 gap-8 bg-neutral-0 border border-neutral-30;
-
-      h2 {   
+      
+      h2 {
         @apply text-heading-l;
       }
     }
-
+    
     header {
       @apply pt-4 px-4 pb-6 bg-neutral-0 border border-neutral-30;
     }
-  
-    header + main {
+    
+    header+main {
+      height: calc(100vh - 172px);
+      
       @media (max-width: 1439px) {
         height: calc(100vh - 228px);
       }
     }
-
-    // dev
-
-    // footer {
-    //   @apply absolute bottom-0 right-0 w-full;
-    // }
   }
 
 }
+

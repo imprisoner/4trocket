@@ -17,8 +17,8 @@
 
       &:indeterminate+.cb__view::after {
         @apply block bg-blue-400 absolute;
-        top: 25%;
-        left: 25%;
+        top: calc(50% - 5px);
+        left: calc(50% - 5px);
         content: '';
         width: 10px;
         height: 10px;

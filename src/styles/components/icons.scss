@@ -28,20 +28,20 @@
 
   //
 
-
-
   .icon-close {
     @apply cursor-pointer;
     @include icon-mask;
-
+  
     -webkit-mask-image: url('../assets/svg/icons/X.svg');
     mask-image: url('../assets/svg/icons/X.svg');
   }
-
+  
   .icon-caret-down {
     @include icon-mask;
-
+  
     -webkit-mask-image: url('../assets/svg/icons/CaretDown.svg');
     mask-image: url('../assets/svg/icons/CaretDown.svg');
   }
+
+
 }

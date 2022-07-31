@@ -7,7 +7,7 @@ const title = form.querySelector('h1')
 const message = form.querySelector('p')
 
 const successMessage = `
-<p class="text-l-rg text-success-400 w-[460px] text-center">
+<p class="text-l-rg text-success-400 text-center">
   Мы отправили новый пароль на вашу электронную почту. 
   Проверьте почту (и не забудьте заглянуть в папку «Спам»). 
   Вы сможете сменить его в Личном кабинете.

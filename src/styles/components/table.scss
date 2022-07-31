@@ -1,6 +1,6 @@
 @layer components {}
 
-table {
+.table {
 
   thead {
     th {
@@ -30,41 +30,80 @@ table {
   td {
     @apply py-3.5 px-4;
   }
-}
 
-.t-orders {
+  &__btn-iconic {
+    @apply icon-m inline-block ml-2.5 cursor-pointer;
+    vertical-align: bottom;
 
-  tbody {
-    tr {
-      @apply hover:bg-blue-10;
-    }
-
-    th {
-      @apply text-blue-400;
+    svg path {
+      @apply fill-neutral-300;
     }
   }
 
+  &__action {
+    @apply text-blue-400 text-m-md;
+
+    &>* {
+      @apply cursor-pointer;
+    }
+  }
+
+  &__cb {}
+
+  .disabled {
+
+    @apply bg-neutral-20 text-neutral-50;
+    td, th {
+      @apply bg-neutral-20 text-neutral-50;
+    }
+    .table__cb,
+    &.table__cb {
+      @apply bg-neutral-10;
+    }
+
+    .table__action *,
+    &.table__action * {
+      @apply text-neutral-50 cursor-default;
+    }
+
+    .badge {
+      @apply opacity-50
+    }
+  }
+
+  &-hover {
+    tbody {
+      tr {
+        @apply hover:bg-blue-10;
+      }
+    }
+  }
+}
+
+
+
+
+
+.t-orders {
   tr td:not(:nth-child(2)),
   tr th:not(:nth-child(2)) {
     width: 1px;
     white-space: nowrap;
   }
-
-  &__order a {
-    @apply cursor-pointer;
-  }
 }
 
 .t-check {
+
   // prevent cells collapsing on 1280px
-  td:not(:first-child), th:not(:first-child) {
-    white-space: nowrap;  
+  td:not(:first-child),
+  th:not(:first-child) {
+    white-space: nowrap;
   }
 }
 
 
 .t-change {
-  
+
   tr td:first-child,
   tr th:first-child {
     width: 1px;

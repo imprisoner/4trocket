@@ -10,13 +10,11 @@
       @apply flex items-end text-l-rg text-neutral-700;
   
       a {
-        display: block;
-        outline: none;
-        margin-left: 10px;
+        @apply block outline-none ml-2.5;
       }
   
       >a.active {
-        font-weight: 700;
+        @apply text-l-md;
       }
     }
   
@@ -37,13 +35,7 @@
         width: inherit;
         height: inherit;
         
-        content: '';
-        -webkit-mask-size: contain;
-        mask-size: contain;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-position: 50% 50%;
-        mask-position: 50% 50%;
+        @include icon-mask;
       }
     }
   

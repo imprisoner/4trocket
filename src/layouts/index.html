@@ -10,250 +10,219 @@
 </head>
 
 <body class="layout-2">
-  <div class="modal container-fluid bg-neutral-0 p-8 bottom-[auto]" id="order_details">
-    <div class="flex items-center justify-between mb-4">
-      <h2 class="text-heading-l">Заказ # 3577_1464</h2>
-      <div class="modal__close w-10 h-10 bg-neutral-700"></div>
-    </div>
-    <div class="flex gap-8 mb-8">
-      <button class="btn btn-big btn-outlined" type="button" id="cancel_trigger">Отменить заказ</button>
-      <button class="btn btn-big btn-secondary" type="button" id="actions_trigger">Действия</button>
-    </div>
-    <div class="row mb-4">
-      <div class="col-5">
-        <h4 class="text-heading-s">Общая информация</h4>
+  <div class="modal order-modal" id="order_details">
+    
+    <div class="modal__dialog container gap-4 px-12 bg-neutral-0 p-8 bottom-[auto] w-fit max-w-[1440px]">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-heading-l">Заказ # <span id="order_id">3577_1464</span></h2>
+        <div class="modal__close w-10 h-10 bg-neutral-700"></div>
       </div>
-      <div class="col-5">
-        <h4 class="text-heading-s">Детали покупателя</h4>
+      <div class="flex gap-8 mb-8">
+        <button class="btn btn-big btn-outlined" type="button" id="cancel_trigger">Отменить заказ</button>
+        <button class="btn btn-big btn-secondary" type="button" id="actions_trigger">Действия</button>
       </div>
-    </div>
-    <div class="row text-l-md mb-8">
-      <div class="col-5 flex flex-col gap-4">
-        <div class="row">
-          <div class="col-5">
-            <span class="text-neutral-200">Статус</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">Поступил в ПВЗ</span>
-          </div>
+      <div class="row mb-4">
+        <div class="col-5">
+          <h4 class="text-heading-s">Общая информация</h4>
         </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Нахождение заказа</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">ПВЗ #25 Белорусская</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Дата создания заказа</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">07.03.2022 23:05</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Дата отгрузки</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">08.03.2022 12:58</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Склад</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">Зеленоград</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Служба доставки</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">Пункт ПВЗ #Беллоруская</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Метод доставки</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">Доставка до ПВЗ</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Трек-номер</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">3577_1464</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Обещанная дата доставки</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">09.03.2022 - 10.03.2022</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Хранение заказа до</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">17.03.2022</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Вид оплаты</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">Онлайн оплата</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Статус оплаты</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">Оплачено</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Ваше примечание</span>
-          </div>
-          <div class="col-7">
-            <a class="text-blue-300 cursor-pointer" id="note_trigger">Добавить</a>
-          </div>
+        <div class="col-5">
+          <h4 class="text-heading-s">Детали покупателя</h4>
         </div>
       </div>
-      <div class="col-5 flex flex-col gap-4">
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Покупатель</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">Константинопольский Константин</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Телефон покупателя</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">+7 987 654-32-10</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Адрес доставки</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">м. Белорусская, БЦ «Петровский» (При себе необходимо иметь паспорт
-              для
-              прохода на территорию)</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5">
-            <span class=" text-neutral-200">Комментарий покупателя</span>
-          </div>
-          <div class="col-7">
-            <span class=" text-neutral-700">Набрать за час</span>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="row mb-10">
-      <div class="col-12">
-        <h4 class="text-heading-s mb-4">Состав и сумма заказа</h4>
-        <table class="t-check w-full">
-          <thead>
-            <tr>
-              <th>Товары</th>
-              <th>Штуки</th>
-              <th>Цена за единицу</th>
-              <th>Сумма</th>
-              <th>Объём, м3</th>
-              <th>Вес, кг</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                Новая Станция Мини - умная колонка Yandex с Алисой с часами (YNDX-00020B), синий YNDX-00020Blue
-              </td>
-              <td>1</td>
-              <td>8 310 ₽</td>
-              <td>8 310 ₽</td>
-              <td>0,019</td>
-              <td>0,42</td>
-            </tr>
-            <tr>
-              <td>Доставка</td>
-              <td>1</td>
-              <td>0 ₽</td>
-              <td></td>
-              <td>0 ₽</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>8 310 ₽</td>
-              <td>0,019</td>
-              <td>0,42</td>
-            </tr>
-          </tbody>
-        </table>
+     
+      
+      <div class="row text-l-md mb-8"  >
+         <!-- order section -->
+        <div class="col-5 flex flex-col gap-4" id="order_section">
+          <div class="row">
+            <div class="col-5">
+              <span class="text-neutral-200">Статус</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">Поступил в ПВЗ</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Нахождение заказа</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">ПВЗ #25 Белорусская</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Дата создания заказа</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">07.03.2022 23:05</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Дата отгрузки</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">08.03.2022 12:58</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Склад</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">Зеленоград</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Служба доставки</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">Пункт ПВЗ #Беллоруская</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Метод доставки</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">Доставка до ПВЗ</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Трек-номер</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">3577_1464</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Обещанная дата доставки</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">09.03.2022 - 10.03.2022</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Хранение заказа до</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">17.03.2022</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Вид оплаты</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">Онлайн оплата</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Статус оплаты</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">Оплачено</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Ваше примечание</span>
+            </div>
+            <div class="col-7">
+              <a class="text-blue-300 cursor-pointer" id="note_trigger">Добавить</a>
+            </div>
+          </div>
+        </div>
+        <!-- order section end -->
+
+        <!-- buyer section -->
+        <div class="col-5 flex flex-col gap-4" id="buyer_section">
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Покупатель</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">Константинопольский Константин</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Телефон покупателя</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-blue-300">+7 987 654-32-10</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Адрес доставки</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">м. Белорусская, БЦ «Петровский» (При себе необходимо иметь паспорт
+                для
+                прохода на территорию)
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5">
+              <span class=" text-neutral-200">Комментарий покупателя</span>
+            </div>
+            <div class="col-7">
+              <span class=" text-neutral-700">Набрать за час</span>
+            </div>
+          </div>
+        </div>
+        <!-- buyer section end -->
+      </div>
+
+      
+      
+      
+      
+      <div class="row mb-10">
+        <div class="col-12">
+          <h4 class="text-heading-s mb-4">Состав и сумма заказа</h4>
+          <table class="table t-check w-full" id="checkout_table">
+            <thead>
+              <tr>
+                <th>Товары</th>
+                <th>Штуки</th>
+                <th>Цена за единицу</th>
+                <th>Сумма</th>
+                <th>Объём, м3</th>
+                <th>Вес, кг</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h4 class="text-heading-s mb-4">Изменения по заказу</h4>
+          <table class="table t-change w-full" id="changes_table">
+            <thead>
+              <tr>
+                <th>Дата и время MСК</th>
+                <th>Событие</th>
+                <th>Кто изменил</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12">
-        <h4 class="text-heading-s mb-4">Изменения по заказу</h4>
-        <table class="t-change w-full">
-          <thead>
-            <tr>
-              <th>Дата и время MСК</th>
-              <th>Событие</th>
-              <th>Кто изменил</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>08.03.2022 12:34</td>
-              <td>Приняли в ПВЗ #25 Белорусская</td>
-              <td>Сидоров Сидр Сидорович</td>
-            </tr>
-            <tr>
-              <td>08.03.2022 07:59</td>
-              <td>Отправили в ПВЗ #25 Белорусская</td>
-              <td>Иванов Иван Иванович</td>
-            </tr>
-            <tr>
-              <td>08.03.2022 07:59</td>
-              <td>Приняли в ХАБ (Елино)</td>
-              <td>Иванов Иван Иванович</td>
-            </tr>
-            <tr>
-              <td>08.03.2022 06:41</td>
-              <td>Выгрузили заказ</td>
-              <td>Модуль API</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <!-- modals -->
+    
   </div>
   <div class="modal modal-primary" id="note_modal">
     <div class="modal__dialog">
@@ -460,7 +429,7 @@
           </div>
         </a>
         <div class="menu-item submenu">
-          <div class="menu-item__wrapper submenu__trigger">
+          <button class="menu-item__wrapper submenu__trigger">
             <div class="menu-item__icon">
               <div class="icon-m">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -490,8 +459,8 @@
                 </svg>
               </div>
             </div>
-          </div>
-          <div class="submenu__dropdown">
+          </button>
+          <div class="submenu__dropdown panel">
             <a href="#" class="menu-item">
               <div class="menu-item__wrapper">
                 <div class="menu-item__text">
@@ -552,7 +521,7 @@
   </aside>
   <div class="right">
     <header class="header">
-      <form action="" method="get" class="filters">
+      <form action="" method="get" class="filters" id="filters_form">
         <fieldset>
           <div class="filters__block">
             <label class="input-group">
@@ -617,7 +586,7 @@
     </header>
     <main>
       <div class="content">
-        <table class="t-orders">
+        <table class=" table table-hover t-orders" id="orders">
           <thead>
             <tr>
               <th># Order</th>
@@ -629,7 +598,7 @@
           </thead>
           <tbody>
             <tr>
-              <th class="t-orders__order"><a>6084_1</a></th>
+              <td class="table__action"><a>6084_1</a></td>
               <td>Афонин Максим</td>
               <td>
                 <span class="badge badge-success">Передан клиенту</span>
@@ -640,7 +609,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>3577_1465</a></th>
+              <td class="table__action"><a>3577_1465</a></td>
               <td>Павлова Анна</td>
               <td>
                 <span class="badge badge-success">Передан клиенту</span>
@@ -651,7 +620,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>4925_345</a></th>
+              <td class="table__action"><a>4925_345</a></td>
               <td>Константинопольский Константин</td>
               <td>
                 <span class="badge badge-info">Поступил в ПВЗ</span>
@@ -663,7 +632,7 @@
             </tr>
             <!-- dev -->
             <tr>
-              <th class="t-orders__order"><a>6084_1</a></th>
+              <td class="table__action"><a>6084_1</a></td>
               <td>Афонин Максим</td>
               <td>
                 <span class="badge badge-success">Передан клиенту</span>
@@ -674,7 +643,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>3577_1465</a></th>
+              <td class="table__action"><a>3577_1465</a></td>
               <td>Павлова Анна</td>
               <td>
                 <span class="badge badge-success">Передан клиенту</span>
@@ -685,7 +654,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>4925_345</a></th>
+              <td class="table__action"><a>4925_345</a></td>
               <td>Константинопольский Константин</td>
               <td>
                 <span class="badge badge-info">Поступил в ПВЗ</span>
@@ -696,7 +665,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>6084_1</a></th>
+              <td class="table__action"><a>6084_1</a></td>
               <td>Афонин Максим</td>
               <td>
                 <span class="badge badge-success">Передан клиенту</span>
@@ -707,7 +676,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>3577_1465</a></th>
+              <td class="table__action"><a>3577_1465</a></td>
               <td>Павлова Анна</td>
               <td>
                 <span class="badge badge-success">Передан клиенту</span>
@@ -718,7 +687,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>4925_345</a></th>
+              <td class="table__action"><a>4925_345</a></td>
               <td>Константинопольский Константин</td>
               <td>
                 <span class="badge badge-info">Поступил в ПВЗ</span>
@@ -729,7 +698,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>6084_1</a></th>
+              <td class="table__action"><a>6084_1</a></td>
               <td>Афонин Максим</td>
               <td>
                 <span class="badge badge-success">Передан клиенту</span>
@@ -740,7 +709,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>3577_1465</a></th>
+              <td class="table__action"><a>3577_1465</a></td>
               <td>Павлова Анна</td>
               <td>
                 <span class="badge badge-success">Передан клиенту</span>
@@ -751,7 +720,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>4925_345</a></th>
+              <td class="table__action"><a>4925_345</a></td>
               <td>Константинопольский Константин</td>
               <td>
                 <span class="badge badge-info">Поступил в ПВЗ</span>
@@ -762,7 +731,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>6084_1</a></th>
+              <td class="table__action"><a>6084_1</a></td>
               <td>Афонин Максим</td>
               <td>
                 <span class="badge badge-success">Передан клиенту</span>
@@ -773,7 +742,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>3577_1465</a></th>
+              <td class="table__action"><a>3577_1465</a></td>
               <td>Павлова Анна</td>
               <td>
                 <span class="badge badge-success">Передан клиенту</span>
@@ -784,7 +753,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>4925_345</a></th>
+              <td class="table__action"><a>4925_345</a></td>
               <td>Константинопольский Константин</td>
               <td>
                 <span class="badge badge-info">Поступил в ПВЗ</span>
@@ -795,7 +764,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>6084_1</a></th>
+              <td class="table__action"><a>6084_1</a></td>
               <td>Афонин Максим</td>
               <td>
                 <span class="badge badge-success">Передан клиенту</span>
@@ -806,7 +775,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>3577_1465</a></th>
+              <td class="table__action"><a>3577_1465</a></td>
               <td>Павлова Анна</td>
               <td>
                 <span class="badge badge-success">Передан клиенту</span>
@@ -817,7 +786,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>4925_345</a></th>
+              <td class="table__action"><a>4925_345</a></td>
               <td>Константинопольский Константин</td>
               <td>
                 <span class="badge badge-info">Поступил в ПВЗ</span>
@@ -828,7 +797,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>6084_1</a></th>
+              <td class="table__action"><a>6084_1</a></td>
               <td>Афонин Максим</td>
               <td>
                 <span class="badge badge-success">Передан клиенту</span>
@@ -839,7 +808,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>3577_1465</a></th>
+              <td class="table__action"><a>3577_1465</a></td>
               <td>Павлова Анна</td>
               <td>
                 <span class="badge badge-success">Передан клиенту</span>
@@ -850,7 +819,7 @@
               <td>02.10.2021</td>
             </tr>
             <tr>
-              <th class="t-orders__order"><a>4925_345</a></th>
+              <td class="table__action"><a>4925_345</a></td>
               <td>Константинопольский Константин</td>
               <td>
                 <span class="badge badge-info">Поступил в ПВЗ</span>

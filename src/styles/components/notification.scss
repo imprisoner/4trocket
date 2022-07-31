@@ -1,4 +1,4 @@
-// @layer components {
+@layer components {
   .nf {
     @apply p-4 flex flex-col gap-2 shadow-2 rounded;
 
@@ -11,16 +11,7 @@
     &__icon {
       @apply icon-l;
       @apply inline-block;
-   
-      content: '';
-
-      -webkit-mask-size: contain;
-      mask-size: contain;
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-position: 50% 50%;
-      mask-position: 50% 50%;
-
+      @include icon-mask;
       -webkit-mask-image: url('../assets/svg/icons/WarningCircle.svg');
       mask-image: url('../assets/svg/icons/WarningCircle.svg');
     }
@@ -34,7 +25,7 @@
     }
 
     &__close {
-      @apply icon-m bg-neutral-60 icon-close;
+      @apply icon-m bg-neutral-60 icon-close ml-auto;
     }
     // states
     &-danger {
@@ -69,4 +60,4 @@
       @apply bg-info-main;
     }
   }
-// }
+}

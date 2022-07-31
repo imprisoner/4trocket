@@ -1,0 +1,74 @@
+.dd {
+  @apply relative;
+
+  &-item {
+    @apply bg-neutral-0 py-2 px-4 text-neutral-700 whitespace-nowrap text-l-rg;
+    @apply hover:cursor-pointer hover:bg-neutral-10;
+  }
+
+  &-item.disabled {
+      @apply py-3 px-4 text-neutral-50 border-t border-neutral-30;
+      @apply hover:bg-neutral-0 hover:cursor-default;
+  }
+
+  &__trigger {
+    @apply flex items-center border border-neutral-30 rounded shadow-1 text-l-md ;
+
+    &:active {
+      @apply bg-neutral-20 shadow-none;
+    }
+
+    &::after {
+      @apply icon-caret-down icon-s bg-neutral-80 ml-2.5;
+    }
+
+    &:focus-visible {
+      @apply focused bg-neutral-10 border-blue-400 shadow-none;
+    }
+  }
+
+  &__panel {
+    @apply border border-neutral-30 rounded shadow-2 absolute w-fit left-0 flex-col hidden;
+    top: calc(100% + 8px);
+  }
+
+
+  &:hover &__trigger {
+    @apply bg-neutral-10 
+  }
+
+  &.active &__trigger {
+    @apply bg-neutral-20 shadow-none;
+  }
+
+  &.active &__panel {
+    @apply flex flex-col z-10;
+  }
+
+
+  &.active &__trigger::after {
+    @apply icon-caret-down;
+  }
+
+  &.active &__trigger > .menu-item__caret {
+    transform: rotate(180deg);
+  }
+
+  &.active &__panel {
+    @apply flex;
+    -webkit-animation: smoothFade 0.5s ease-out;
+    -moz-animation: smoothFade 0.5s ease-out;
+    -o-animation: smoothFade 0.5s ease-out;
+    animation: smoothFade 0.5s ease-out;
+
+  }
+
+  // all menu disabled
+  &.disabled &__trigger {
+    @apply text-neutral-50 bg-neutral-20 shadow-none cursor-default;
+
+    &::after {
+      @apply bg-neutral-50
+    }
+  }
+}

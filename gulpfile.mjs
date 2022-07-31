@@ -91,7 +91,7 @@ const watcher = {
     return watch('src/assets/img', { ignoreInitial: false }, series(processImages, reload))
   },
   mocks() {
-    return watch('src/assets/mocks/*', { ignoreInitial: false }, series(mockData, reload))
+    return watch('src/assets/mock/*', { ignoreInitial: false }, series(mockData, reload))
   }
 }
 
@@ -122,7 +122,7 @@ function processSVG() {
 }
 
 function mockData() {
-  return src('src/assets/mocks/**/*').pipe(dest('dist/assets/mocks/'))
+  return src('src/assets/mock/**/*').pipe(dest('dist/assets/mock/'))
 }
 
 function build(cb) {

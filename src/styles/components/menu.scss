@@ -20,11 +20,12 @@
   .menu-item {
     @apply rounded;
 
-    &:focus {
+    &:focus-visible {
       @apply focused;
     }
+
     &__wrapper {
-      @apply py-2.5 px-3 bg-neutral-10 flex items-center gap-2 cursor-pointer;
+      @apply py-2.5 px-3 rounded bg-neutral-10 flex items-center gap-2 cursor-pointer;
     }
 
     &-secodary {
@@ -32,9 +33,7 @@
     }
 
     &>&__wrapper &__icon {
-      path {
-        @apply fill-neutral-700;
-      }
+      @include icon-svg(fill-neutral-700);
     }
 
     &>&__wrapper &__text {
@@ -50,11 +49,11 @@
 
     // focused
 
-    &:focus > &__wrapper{
-      @apply outline-3 outline-blue-50 outline-offset-0;
+    &:focus-visible > &__wrapper{
+      @apply focused;
     }
 
-    &:focus > &__wrapper &__text {
+    &:focus-visible > &__wrapper &__text {
       @apply text-blue-400;
     }
 
@@ -69,15 +68,11 @@
     }
 
     &.active > &__wrapper &__icon {
-      path {
-        @apply fill-neutral-0;
-      }
+     @include icon-svg(fill-neutral-0);
     }
 
     &.disabled > &__wrapper &__icon {
-      svg path {
-        @apply fill-neutral-50;
-      }
+      @include icon-svg(fill-neutral-50);
     }
 
     &.disabled > &__wrapper &__text {
@@ -95,14 +90,20 @@
       top: calc(100% + 8px);
     }
 
+    &__trigger {
+      @apply w-full text-left;
+
+      &:focus-visible {
+        @apply focused;
+      }
+    }
+    
     &.active &__trigger {
       @apply bg-neutral-10;
     }
 
     &.active &__trigger > .menu-item__icon {
-      svg path {
-        @apply fill-blue-400;
-      }
+      @include icon-svg(fill-blue-400)
     }
 
     &.active &__trigger > .menu-item__text {
@@ -123,51 +124,8 @@
     }
 
     &.disabled &__trigger .menu-item__caret {
-      svg {
-        @apply fill-neutral-50;
-      }
+      @include icon-svg(fill-neutral-50);
     }
   }
 
-  // dropdown fade-in animation
-
-  @-webkit-keyframes smoothFade {
-    0% {
-      @apply opacity-0;
-    }
-
-    100% {
-      @apply flex opacity-100;
-    }
-  }
-
-  @-moz-keyframes smoothFade {
-    0% {
-      @apply opacity-0;
-    }
-
-    100% {
-      @apply flex opacity-100;
-    }
-  }
-
-  @-o-keyframes smoothFade {
-    0% {
-      @apply opacity-0;
-    }
-
-    100% {
-      @apply flex opacity-100;
-    }
-  }
-
-  @keyframes smoothFade {
-    0% {
-      @apply opacity-0;
-    }
-
-    100% {
-      @apply flex opacity-100;
-    }
-  }
 }

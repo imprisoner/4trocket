@@ -1,3 +1,6 @@
+import { events } from 'utils'
+const { modalClose, modalOpen } = events
+
 export default class Modal {
   constructor(selector = '') {
     if (selector) {
@@ -6,25 +9,28 @@ export default class Modal {
       this.modal = document.querySelector('.modal')
     }
     // init modal
-    const dialog = this.modal.querySelector('.modal__dialog')
-    const closeBtn = this.modal.querySelector('.modal__close')
+    this.dialog = this.modal.querySelector('.modal__dialog')
+    this.closeBtn = this.modal.querySelector('.modal__close')
 
     // overlay click
-    if (dialog) {
+    if (this.dialog) {
       this.modal.addEventListener('click', e => {
-        if(e.target === this.modal) this.close()
+        if (e.target === this.modal) this.close()
       })
     }
 
-    closeBtn.addEventListener('click', () => this.close())
+    this.closeBtn.addEventListener('click', () => this.close())
   }
 
   open() {
-    console.log(this.modal)
+    // this.modal.parentElement.style = 'overflow: hidden'
     this.modal.classList.add('open')
+    this.modal.dispatchEvent(modalOpen)
   }
 
   close() {
+    // this.modal.parentElement.style = ''
     this.modal.classList.remove('open')
+    this.modal.dispatchEvent(modalClose)
   }
 }

@@ -1,0 +1,16 @@
+.order-modal {
+  &.modal {
+    @apply absolute;
+  }
+  
+  & > .modal__dialog {
+    overflow: scroll;
+    left: calc(50vw - 720px);
+    min-width: 1262px;
+
+    @media (max-width: 1440px) {
+      left: 0;
+      top: 0;
+    }
+  }
+}

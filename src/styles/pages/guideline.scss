@@ -2,4 +2,9 @@
   .content > section {
     display: none;
   }
+
+  section.buttons > section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

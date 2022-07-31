@@ -1,0 +1,40 @@
+@layer components {
+  .tooltip {
+    @apply relative;
+    &__trigger {
+      @apply flex items-center gap-1 text-m-md text-neutral-700;
+      @apply hover:cursor-pointer;
+  
+      &::after {
+        @include icon-mask;
+        @apply icon-m bg-neutral-700;
+  
+        -webkit-mask-image: url('../assets/svg/icons/Info.svg');
+        mask-image: url('../assets/svg/icons/Info.svg');
+      }
+    }
+  
+    &__content {
+      @apply absolute p-2 bg-neutral-700 text-s-rg text-neutral-0 rounded text-center hidden -z-10;
+      width: 282px;
+      bottom: 35px;
+      right: -134px;
+
+      &::after {
+        @apply absolute bg-neutral-700 rotate-45 -bottom-1;
+        content: '';
+        left: calc(50% - 7.75px);
+        width: 11px;
+        height: 11px;
+      }
+    }
+
+    &__trigger:hover + &__content {
+      @apply z-0 block;
+      -webkit-animation: smoothFade 0.5s ease-out;
+      -moz-animation: smoothFade 0.5s ease-out;
+      -o-animation: smoothFade 0.5s ease-out;
+      animation: smoothFade 0.5s ease-out;
+    }
+  }
+}
