@@ -1,140 +1,138 @@
-@layer components {
+@import './global/_mixins.scss';
+.btn {
+  @apply flex py-1.5 px-4 items-center gap-1 shadow-1 rounded text-m-md hover:cursor-pointer outline-none outline-offset-0 w-fit h-8;
+  @apply active:outline-none active:shadow-none;
 
-  .btn {
-    @apply flex py-1.5 px-4 items-center gap-1 shadow-1 rounded text-m-md hover:cursor-pointer outline-none outline-offset-0 w-fit h-8;
-    @apply active:outline-none active:shadow-none;
-    &:focus-visible{
-      @apply focused;
-    }
-
-    &__icon {
-      @apply icon-s;
-    }
-
-    &-big {
-      @apply py-2 text-l-md h-10;
-    }
-
-    &-icon {
-     @apply p-1.5;
-    }
-
-    &-big.btn-icon {
-      @apply p-2.5;
-    }
-
-    &-icon &__icon{
-      @apply icon-m;
-    }
-
-    &-primary {
-      @apply text-neutral-0 bg-blue-400 hover:bg-blue-500 focus:bg-blue-500 active:bg-blue-700;
-    }
-
-    // icon states
-
-    &-primary svg path {
-      @apply fill-neutral-0;
-    }
-
-    &-primary &__icon::after {
-      @apply bg-neutral-0;
-    }
-    
-
-    &-secondary {
-      @apply bg-blue-10 text-blue-400;
-      @apply hover:text-blue-500;
-      @apply focus:text-blue-500 ; 
-      @apply active:text-blue-700 active:shadow-none;
-    }
-
-    // icon states
-
-    &-secondary {
-      @include icon-svg(fill-blue-400)
-    }
-
-    &-secondary:hover, 
-    &-secondary:focus {
-      @include icon-svg(fill-blue-500)
-    }
-
-    &-secondary:active{
-      @include icon-svg(fill-blue-700);
-    }
-
-    &-outlined {
-      @apply bg-neutral-0 text-neutral-700 border border-neutral-30 shadow-none;
-      @apply hover:bg-neutral-10;
-      @apply focus:bg-neutral-10 focus:border focus:border-blue-400;
-      @apply active:border-neutral-40 active:bg-neutral-20;
-      // padding: 5px 15px;
-    }
-
-    // icon states
-
-    &-outlined {
-      @include icon-svg(fill-neutral-700)
-    }
-
-    &-danger {
-      @apply text-neutral-0 bg-danger-750;
-      @apply hover:bg-danger-850;
-      @apply focus:bg-danger-850;
-      @apply active:bg-danger-900;   
-    }
-
-    &-danger {
-      @include icon-svg(fill-neutral-0);
-    }
-
-    &-text {
-      @apply text-blue-400 shadow-none;
-      @apply hover:text-blue-500;
-      @apply focus:text-blue-500;
-      @apply active:text-blue-700;
-      @include icon-svg(fill-blue-400);
-    }
-
-    &-text:hover, 
-    &-text:focus {
-      @include icon-svg(fill-blue-500);
-    }
-
-    &-text:active{
-      @include icon-svg(fill-blue-700);
-    }
-
-    
-    &:disabled, 
-    &.disabled {
-      @apply bg-neutral-20 border border-neutral-30 text-neutral-50 shadow-none;
-      @apply hover:cursor-default hover:bg-neutral-20  hover:shadow-none;
-    }
-
-    // icon states
-
-    &:disabled, 
-    &.disabled {
-      @include icon-svg(fill-neutral-50);
-    }
-
-    &-text:disabled,
-    &-text.disabled {
-      @apply border-none bg-transparent hover:bg-transparent;
-      
-    }
+  &:focus-visible {
+    @apply focused;
   }
 
-  // anchor tag
-
-  a.btn {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    text-decoration: none;
+  &__icon {
+    @apply icon-s;
   }
 
+  &-big {
+    @apply py-2 text-l-md h-10;
+  }
+
+  &-icon {
+    @apply p-1.5;
+  }
+
+  &-big.btn-icon {
+    @apply p-2.5;
+  }
+
+  &-icon &__icon {
+    @apply icon-m;
+  }
+
+  &-primary {
+    @apply text-neutral-0 bg-blue-400 hover:bg-blue-500 focus:bg-blue-500 active:bg-blue-700;
+  }
+
+  // icon states
+
+  &-primary svg path {
+    @apply fill-neutral-0;
+  }
+
+  &-primary &__icon::after {
+    @apply bg-neutral-0;
+  }
+
+
+  &-secondary {
+    @apply bg-blue-10 text-blue-400;
+    @apply hover:text-blue-500;
+    @apply focus:text-blue-500;
+    @apply active:text-blue-700 active:shadow-none;
+  }
+
+  // icon states
+
+  &-secondary {
+    @include icon-svg(fill-blue-400)
+  }
+
+  &-secondary:hover,
+  &-secondary:focus {
+    @include icon-svg(fill-blue-500)
+  }
+
+  &-secondary:active {
+    @include icon-svg(fill-blue-700);
+  }
+
+  &-outlined {
+    @apply bg-neutral-0 text-neutral-700 border border-neutral-30 shadow-none;
+    @apply hover:bg-neutral-10;
+    @apply focus:bg-neutral-10 focus:border focus:border-blue-400;
+    @apply active:border-neutral-40 active:bg-neutral-20;
+    // padding: 5px 15px;
+  }
+
+  // icon states
+
+  &-outlined {
+    @include icon-svg(fill-neutral-700)
+  }
+
+  &-danger {
+    @apply text-neutral-0 bg-danger-750;
+    @apply hover:bg-danger-850;
+    @apply focus:bg-danger-850;
+    @apply active:bg-danger-900;
+  }
+
+  &-danger {
+    @include icon-svg(fill-neutral-0);
+  }
+
+  &-text {
+    @apply text-blue-400 shadow-none;
+    @apply hover:text-blue-500;
+    @apply focus:text-blue-500;
+    @apply active:text-blue-700;
+    @include icon-svg(fill-blue-400);
+  }
+
+  &-text:hover,
+  &-text:focus {
+    @include icon-svg(fill-blue-500);
+  }
+
+  &-text:active {
+    @include icon-svg(fill-blue-700);
+  }
+
+
+  &:disabled,
+  &.disabled {
+    @apply bg-neutral-20 border border-neutral-30 text-neutral-50 shadow-none;
+    @apply hover:cursor-default hover:bg-neutral-20 hover:shadow-none;
+  }
+
+  // icon states
+
+  &:disabled,
+  &.disabled {
+    @include icon-svg(fill-neutral-50);
+  }
+
+  &-text:disabled,
+  &-text.disabled {
+    @apply border-none bg-transparent hover:bg-transparent;
+
+  }
+}
+
+// anchor tag
+
+a.btn {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
 }

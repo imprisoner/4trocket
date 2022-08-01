@@ -1,85 +1,80 @@
-@layer base {
-
-  // Chrome scrollbar
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-  }
-  
-  html * {
-    // Firefox scrollbar
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
-  }
-  
-
-  .layout-1 {
-    @apply bg-neutral-10 flex items-center justify-center;
-
-    .centered-block {
-      @apply flex flex-col shadow-1 items-center gap-8 bg-neutral-0 border border-neutral-150 p-15;
-      max-width: 600px;
-
-      h1 {
-        @apply text-neutral-700 text-center;
-      }
-
-      .textfield {
-        @apply w-80;
-      }
-    }
-  }
-
-  .layout-2 {
-    @apply flex;
-
-    .left {
-      width: 256px;
-      height: 100vh;
-    }
-
-    .menu {
-      height: 100vh;
-    }
-
-    .right {
-      @apply flex-1 bg-neutral-10;
-      min-width: 1000px;
-    }
-
-    main {
-      @apply pl-6 py-4 pr-4;
-      overflow-y: scroll;
-    }
-    
-    .content {
-      @apply w-full flex flex-col p-8 gap-8 bg-neutral-0 border border-neutral-30;
-      
-      h2 {
-        @apply text-heading-l;
-      }
-    }
-    
-    header {
-      @apply pt-4 px-4 pb-6 bg-neutral-0 border border-neutral-30;
-    }
-    
-    header+main {
-      height: calc(100vh - 172px);
-      
-      @media (max-width: 1439px) {
-        height: calc(100vh - 228px);
-      }
-    }
-  }
-
+// Chrome scrollbar
+::-webkit-scrollbar {
+  width: 10px;
 }
 
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+html * {
+  // Firefox scrollbar
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+}
+
+
+.layout-1 {
+  @apply bg-neutral-10 flex items-center justify-center;
+
+  .centered-block {
+    @apply flex flex-col shadow-1 items-center gap-8 bg-neutral-0 border border-neutral-150 p-15;
+    max-width: 600px;
+
+    h1 {
+      @apply text-neutral-700 text-center;
+    }
+
+    .textfield {
+      @apply w-80;
+    }
+  }
+}
+
+.layout-2 {
+  @apply flex;
+
+  .left {
+    width: 256px;
+    height: 100vh;
+  }
+
+  .menu {
+    height: 100vh;
+  }
+
+  .right {
+    @apply flex-1 bg-neutral-10;
+    min-width: 1000px;
+  }
+
+  main {
+    @apply pl-6 py-4 pr-4;
+    overflow-y: scroll;
+  }
+  
+  .content {
+    @apply w-full flex flex-col p-8 gap-8 bg-neutral-0 border border-neutral-30;
+    
+    h2 {
+      @apply text-heading-l;
+    }
+  }
+  
+  header {
+    @apply pt-4 px-4 pb-6 bg-neutral-0 border border-neutral-30;
+  }
+  
+  header+main {
+    height: calc(100vh - 172px);
+    
+    @media (max-width: 1439px) {
+      height: calc(100vh - 228px);
+    }
+  }
+}

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "build": "gulp build"
   },
   "keywords": [
     "html",
@@ -36,6 +37,7 @@
     "gulp-sass": "^5.1.0",
     "imask": "^6.4.2",
     "postcss": "^8.4.14",
+    "postcss-import": "^14.1.0",
     "sass": "^1.53.0"
   }
 }

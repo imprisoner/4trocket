@@ -20,11 +20,10 @@ const utils = fs
   .readdirSync(UTILS_DIR)
   .filter(filename => filename !== 'index.js')
   .map(filename => path.resolve(UTILS_DIR, filename))
-console.log(utils)
 
 export default {
-  // mode: 'production',
-  mode: 'development',
+  mode: 'production',
+  // mode: 'development',
   resolve: {
     extensions: ['.js', '.mjs'],
     alias: {
@@ -32,7 +31,7 @@ export default {
       'utils': UTILS_DIR
     }
   },
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
   entry: {
     utils: utils,
     ...Object.fromEntries(pageScripts),

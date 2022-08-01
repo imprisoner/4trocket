@@ -1,36 +1,34 @@
-@layer components {
-  .cb {
-    @include custom-checkbox-control('.cb');
+.cb {
+  @include custom-checkbox-control('.cb');
 
+  
+  input[type=checkbox] {
     
-    input[type=checkbox] {
-      
-      // cb pseudo-element def 
+    // cb pseudo-element def 
 
-      &:checked+.cb__view::after {
-        @apply block icon-m;
-        content: '';
-        background: url('../assets/svg/input/checked.svg') center / cover no-repeat;
-      }
+    &:checked+.cb__view::after {
+      @apply block icon-m;
+      content: '';
+      background: url('../assets/svg/input/checked.svg') center / cover no-repeat;
+    }
 
-      // indeterminate state defs
+    // indeterminate state defs
 
-      &:indeterminate+.cb__view::after {
-        @apply block bg-blue-400 absolute;
-        top: calc(50% - 5px);
-        left: calc(50% - 5px);
-        content: '';
-        width: 10px;
-        height: 10px;
-      }
-      
-      &:disabled:checked+.cb__view {
-        @apply bg-neutral-40 border-none;
-      }
-      
-      &:disabled:indeterminate+.cb__view::after {
-        @apply block bg-neutral-40;
-      }
+    &:indeterminate+.cb__view::after {
+      @apply block bg-blue-400 absolute;
+      top: calc(50% - 5px);
+      left: calc(50% - 5px);
+      content: '';
+      width: 10px;
+      height: 10px;
+    }
+    
+    &:disabled:checked+.cb__view {
+      @apply bg-neutral-40 border-none;
+    }
+    
+    &:disabled:indeterminate+.cb__view::after {
+      @apply block bg-neutral-40;
     }
   }
 }

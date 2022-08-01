@@ -2,6 +2,7 @@ import gulp from 'gulp'
 import gulpSass from 'gulp-sass'
 import dartSass from 'sass'
 import postcss from 'gulp-postcss'
+import postcssImport from 'postcss-import'
 import pug from 'gulp-pug'
 import clean from 'gulp-clean'
 import imagemin, { mozjpeg, optipng, svgo, gifsicle } from 'gulp-imagemin'
@@ -18,15 +19,6 @@ const { series, parallel, src, dest, watch } = gulp
 const browserSync = browserSyncInstance.create()
 const sass = gulpSass(dartSass)
 
-export function test(cb) {
-  series(
-    () => src('dist/*').pipe(clean()), 
-    () => src('src/js/vendor/*').pipe(dest('dist/js/vendor/')),
-    () => src(['src/js/*.js, src/js/utils/*.js']).pipe(webpack({config: webpackConfig})).pipe(dest('dist/js/'))
-  )
-
-  cb()
-}
 
 const compiler = {
   js() {
@@ -43,13 +35,14 @@ const compiler = {
   },
   sass() {
     return src('src/styles/*.scss')
-      .pipe(sourcemaps.init())
+      // .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
       .pipe(postcss([
+        postcssImport,
         tailwindcss(tailwindConfig),
         autoprefixer
       ]))
-      .pipe(sourcemaps.write())
+      // .pipe(sourcemaps.write())
       .pipe(dest('dist/styles/'))
     // .pipe(browserSync.stream())
   },
@@ -100,6 +93,7 @@ function cleanOutput(cb) {
 }
 
 export function fonts(cb) {
+  console.log('fonts')
   return src('src/assets/fonts/**/*').pipe(dest('dist/assets/fonts'))
 }
 
@@ -123,10 +117,6 @@ function processSVG() {
 
 function mockData() {
   return src('src/assets/mock/**/*').pipe(dest('dist/assets/mock/'))
-}
-
-function build(cb) {
-  // return src('src/*').pipe(dest('dist/'))
 }
 
 function serve(cb) {
@@ -153,3 +143,6 @@ export const dev =
     serve,
     parallel(watcher.js, watcher.jsVendor, watcher.sass, watcher.html, watcher.fonts, watcher.svg, watcher.images, watcher.mocks)
   )
+
+export const build =
+  series(cleanOutput, compiler.js, compiler.jsVendor, compiler.sass, compiler.html, fonts, processSVG, processImages, mockData)

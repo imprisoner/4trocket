@@ -1,27 +1,25 @@
-@layer components {
-  .badge {
-    @apply inline-block text-s-md whitespace-nowrap w-fit;
-    padding: 2px 8px;
-    border-radius: 32px;
+.badge {
+  @apply inline-block text-s-md whitespace-nowrap w-fit;
+  padding: 2px 8px;
+  border-radius: 32px;
 
-    &-primary {
-      @apply bg-blue-10 border border-blue-75 text-blue-400;
-    }
+  &-primary {
+    @apply bg-blue-10 border border-blue-75 text-blue-400;
+  }
 
-    &-danger {
-      @apply bg-danger-150 border border-danger-400 text-danger-750;
-    }
+  &-danger {
+    @apply bg-danger-150 border border-danger-400 text-danger-750;
+  }
 
-    &-warning {
-      @apply bg-warning-50 border border-warning-75 text-warning-500;
-    }
+  &-warning {
+    @apply bg-warning-50 border border-warning-75 text-warning-500;
+  }
 
-    &-success {
-      @apply bg-success-40 border border-success-300 text-success-400;
-    }
+  &-success {
+    @apply bg-success-40 border border-success-300 text-success-400;
+  }
 
-    &-info {
-      @apply bg-info-surface border border-info-border text-info-main;
-    }
+  &-info {
+    @apply bg-info-surface border border-info-border text-info-main;
   }
 }

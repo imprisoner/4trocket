@@ -1,54 +1,52 @@
-@layer components {
-  .pg {
-    @apply p-4 bg-neutral-0 border border-neutral-30 flex justify-between items-center;
+.pg {
+  @apply p-4 bg-neutral-0 border border-neutral-30 flex justify-between items-center;
+  
+  .btn {
+    @apply h-8;
+  }
+
+  &__quantity {
+    @apply flex items-end text-l-rg text-neutral-700;
+
+    a {
+      @apply block outline-none ml-2.5;
+    }
+
+    >a.active {
+      @apply text-l-md;
+    }
+  }
+
+  &__nav {
+    @apply flex items-center gap-4
+  }
+
+  &__prev,
+  &__next {
+    @apply p-1.5;
     
-    .btn {
-      @apply h-8;
+    & > .btn__icon {
+      @apply icon-m;
     }
 
-    &__quantity {
-      @apply flex items-end text-l-rg text-neutral-700;
-  
-      a {
-        @apply block outline-none ml-2.5;
-      }
-  
-      >a.active {
-        @apply text-l-md;
-      }
-    }
-  
-    &__nav {
-      @apply flex items-center gap-4
-    }
-  
-    &__prev,
-    &__next {
-      @apply p-1.5;
+    &>.btn__icon::after {
+      @apply inline-block;
+      width: inherit;
+      height: inherit;
       
-      & > .btn__icon {
-        @apply icon-m;
-      }
+      @include icon-mask;
+    }
+  }
 
-      &>.btn__icon::after {
-        @apply inline-block;
-        width: inherit;
-        height: inherit;
-        
-        @include icon-mask;
-      }
-    }
-  
-    &__prev >.btn__icon::after {
-      @apply bg-blue-400;
-      -webkit-mask-image: url('../assets/svg/pagination/ArrowLeft.svg');
-      mask-image: url('../assets/svg/pagination/ArrowLeft.svg');
-    }
-    &__next >.btn__icon::after {
-      @apply bg-blue-400;
-      -webkit-mask-image: url('../assets/svg/pagination/ArrowRight.svg');
-      mask-image: url('../assets/svg/pagination/ArrowRight.svg');
-    }
+  &__prev >.btn__icon::after {
+    @apply bg-blue-400;
+    -webkit-mask-image: url('../assets/svg/pagination/ArrowLeft.svg');
+    mask-image: url('../assets/svg/pagination/ArrowLeft.svg');
+  }
+  &__next >.btn__icon::after {
+    @apply bg-blue-400;
+    -webkit-mask-image: url('../assets/svg/pagination/ArrowRight.svg');
+    mask-image: url('../assets/svg/pagination/ArrowRight.svg');
   }
 }
 

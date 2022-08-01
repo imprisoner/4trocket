@@ -1,11 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 // base
 @import './global/layouts.scss';
 @import './global/fonts.scss';
 @import './global/_utils.scss';
-@import './global/_mixins.scss';
 @import './global/_grid.scss';
 @import './global/_animations.scss';
-// components
+
+
 @import './components/buttons.scss';
 @import './components/inputs.scss';
 @import './components/select.scss';
@@ -28,15 +31,20 @@
 @import './components/switch.scss';
 @import './components/dropdown.scss';
 
+
+
+
+
+// components
+
 // blocks
 @import './blocks/order-modal.scss';
 
 // pages
 @import './pages/guideline.scss';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+
 
 @layer base {
 

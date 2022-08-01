@@ -1,7 +1,7 @@
 module.exports = {
   mode: "jit",
   content: [
-    // "./src/layouts/*.html",
+    "./src/layouts/*.html",
     "./dist/*.html"
   ],
   theme: {

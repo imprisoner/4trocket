@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/main.css">
-  <title>Авторизация</title>
+  <title>Восстановление пароля</title>
 </head>
-
 <body class="layout-1">
-  <form action="/" method="post" class="centered-block">
+  <form class="centered-block">
     <div class="logo">
       <svg width="1096" height="134" viewBox="0 0 1096 134" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M262.044 0V29.9531H215.535V134H183.495V29.9531H136.978V0H262.044Z" fill="#2C353E" />
@@ -35,20 +33,20 @@
         <path d="M1095.82 2.28409H972.628V31.2159H1018.45V131.716H1050V31.2159H1095.82V2.28409Z" fill="#4E5A6D" />
       </svg>
     </div>
-    <h1 class="max-w-[480px]">Авторизация</h1>
+    <h1 class="max-w-[480px]">Восстановление пароля</h1>
+    <p class="text-m-rg text-neutral-700 w-80 text-center">Введите Электронную почту,<br>которую вы использовали при регистрации</p>
     <label class="input-group textfield">
       <div class="input-group__wrap">
         <input placeholder="Электронная почта" />
       </div>
+      <div class="input-group__helper-text"></div>
     </label>
-    <label class="input-group textfield">
-      <div class="input-group__wrap">
-        <input type="password" placeholder="Пароль"/>
-      </div>
-    </label>
-    <button type="submit" class="btn btn-big btn-primary">Войти</button>
-    <a href="/recover.html" class="btn btn-big btn-text">Забыли пароль?</a>
+    <button type="submit" class="btn btn-big btn-primary">Восстановить</button>
+    <a href="/authorization.html" class="btn btn-big btn-text">Войти</a>
   </form>
+
+  <script src="./js/utils.js"></script>
+  <script src="./js/recover.mockup.js"></script>
 </body>
 
 </html>

@@ -1,55 +1,41 @@
-@layer components {
-  $modal-width: 480px;
+$modal-width: 480px;
 
+.modal {
+  @apply fixed top-0 right-0 bottom-0 left-0 z-10 hidden;
+  background: rgba(0, 0, 0, 0.4);
 
-  .modal {
-    @apply fixed top-0 right-0 bottom-0 left-0 z-10 hidden;
-    background: rgba(0, 0, 0, 0.4);
+  &.open {
+    @apply block;
+  }
 
-    &.open {
-      @apply block;
-    }
+  &__dialog {
+    @apply flex flex-col gap-2 bg-neutral-0 border border-neutral-30 shadow-2 rounded p-6;
+    @apply absolute;
+    width: $modal-width;
+    left: calc(50vw - $modal-width/2);
+    top: 160px;
+  }
 
-    &__dialog {
-      @apply flex flex-col gap-2 bg-neutral-0 border border-neutral-30 shadow-2 rounded p-6;
-      @apply absolute;
-      width: $modal-width;
-      left: calc(50vw - $modal-width/2);
-      top: 160px;
-    }
+  &__top {
+    @apply flex items-center gap-2;
+  }
 
-    // @apply mx-auto mt-40;
+  &__top &__title {
+    @apply text-heading-s flex-1;
+  }
 
-    &__top {
-      @apply flex items-center gap-2;
-    }
+  &__close {
+    @apply ml-auto cursor-pointer bg-neutral-60 icon-m icon-close;
+  }
 
-    // &__top &__status-icon {
-      // display: none;
-    // }
+  &__actions {
+    @apply px-0 pt-4 pb-0 flex items-end gap-2;
+  }
 
-    &__top &__title {
-      @apply text-heading-s flex-1;
-    }
-
-    &__close {
-      @apply ml-auto cursor-pointer bg-neutral-60 icon-m icon-close;
-    }
-
-    &__actions {
-      @apply px-0 pt-4 pb-0 flex items-end gap-2;
-    }
-
-    // &__close {
-    //   @apply icon-m;
-    // }
-    // states
-
-    &-danger &__status-icon {
-      @include icon-svg(fill-danger-750);
-    }
-    &-primary &__status-icon {
-      @include icon-svg(fill-blue-400);
-    }
+  &-danger &__status-icon {
+    @include icon-svg(fill-danger-750);
+  }
+  &-primary &__status-icon {
+    @include icon-svg(fill-blue-400);
   }
 }

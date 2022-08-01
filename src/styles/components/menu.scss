@@ -1,131 +1,128 @@
-@layer components {
-  .menu {
-    @apply flex flex-col items-center w-full bg-neutral-10 border border-neutral-30;
+.menu {
+  @apply flex flex-col items-center w-full bg-neutral-10 border border-neutral-30;
 
 
-    &__top {
-      @apply p-6;
-    }
-
-    .logo {
-      width: 200px;
-      height: 23px;
-    }
-
-    &__body {
-      @apply w-full pl-4 pt-3 pr-5 pb-6 gap-1 flex flex-col;
-    }
+  &__top {
+    @apply p-6;
   }
 
-  .menu-item {
-    @apply rounded;
+  .logo {
+    width: 200px;
+    height: 23px;
+  }
+
+  &__body {
+    @apply w-full pl-4 pt-3 pr-5 pb-6 gap-1 flex flex-col;
+  }
+}
+
+.menu-item {
+  @apply rounded;
+
+  &:focus-visible {
+    @apply focused;
+  }
+
+  &__wrapper {
+    @apply py-2.5 px-3 rounded bg-neutral-10 flex items-center gap-2 cursor-pointer;
+  }
+
+  &-secodary {
+    padding-right: 42px;
+  }
+
+  &>&__wrapper &__icon {
+    @include icon-svg(fill-neutral-700);
+  }
+
+  &>&__wrapper &__text {
+    @apply text-neutral-700 flex-1 text-m-md overflow-hidden;
+  }
+
+  /* states */
+
+  // hover
+  &:hover>&__wrapper &__text {
+    @apply text-blue-400;
+  }
+
+  // focused
+
+  &:focus-visible>&__wrapper {
+    @apply focused;
+  }
+
+  &:focus-visible>&__wrapper &__text {
+    @apply text-blue-400;
+  }
+
+  // active
+
+  &.active>&__wrapper {
+    @apply bg-blue-400 outline-none;
+  }
+
+  &.active>&__wrapper &__text {
+    @apply text-neutral-0;
+  }
+
+  &.active>&__wrapper &__icon {
+    @include icon-svg(fill-neutral-0);
+  }
+
+  &.disabled>&__wrapper &__icon {
+    @include icon-svg(fill-neutral-50);
+  }
+
+  &.disabled>&__wrapper &__text {
+    @apply text-neutral-50;
+  }
+
+}
+
+.submenu {
+  @apply relative;
+  // transition-duration: 2s;
+
+  &__dropdown {
+    @apply absolute w-full left-0 flex-col gap-2 hidden;
+    top: calc(100% + 8px);
+  }
+
+  &__trigger {
+    @apply w-full text-left;
 
     &:focus-visible {
       @apply focused;
     }
+  }
 
-    &__wrapper {
-      @apply py-2.5 px-3 rounded bg-neutral-10 flex items-center gap-2 cursor-pointer;
-    }
+  &.active &__trigger {
+    @apply bg-neutral-10;
+  }
 
-    &-secodary {
-      padding-right: 42px;
-    }
+  &.active &__trigger>.menu-item__icon {
+    @include icon-svg(fill-blue-400)
+  }
 
-    &>&__wrapper &__icon {
-      @include icon-svg(fill-neutral-700);
-    }
+  &.active &__trigger>.menu-item__text {
+    @apply text-neutral-700;
+  }
 
-    &>&__wrapper &__text {
-      @apply text-neutral-700 flex-1 text-m-md overflow-hidden;
-    }
+  &.active &__trigger>.menu-item__caret {
+    transform: rotate(180deg);
+  }
 
-    /* states */
-
-    // hover
-    &:hover> &__wrapper &__text {
-      @apply text-blue-400;
-    }
-
-    // focused
-
-    &:focus-visible > &__wrapper{
-      @apply focused;
-    }
-
-    &:focus-visible > &__wrapper &__text {
-      @apply text-blue-400;
-    }
-
-    // active
-
-    &.active > &__wrapper{
-      @apply bg-blue-400 outline-none;
-    }
-
-    &.active > &__wrapper &__text {
-      @apply text-neutral-0;
-    }
-
-    &.active > &__wrapper &__icon {
-     @include icon-svg(fill-neutral-0);
-    }
-
-    &.disabled > &__wrapper &__icon {
-      @include icon-svg(fill-neutral-50);
-    }
-
-    &.disabled > &__wrapper &__text {
-      @apply text-neutral-50;
-    }
+  &.active &__dropdown {
+    @apply flex;
+    -webkit-animation: smoothFade 0.5s ease-out;
+    -moz-animation: smoothFade 0.5s ease-out;
+    -o-animation: smoothFade 0.5s ease-out;
+    animation: smoothFade 0.5s ease-out;
 
   }
 
-  .submenu {
-    @apply relative;
-    // transition-duration: 2s;
-
-    &__dropdown {
-      @apply absolute w-full left-0 flex-col gap-2 hidden;
-      top: calc(100% + 8px);
-    }
-
-    &__trigger {
-      @apply w-full text-left;
-
-      &:focus-visible {
-        @apply focused;
-      }
-    }
-    
-    &.active &__trigger {
-      @apply bg-neutral-10;
-    }
-
-    &.active &__trigger > .menu-item__icon {
-      @include icon-svg(fill-blue-400)
-    }
-
-    &.active &__trigger > .menu-item__text {
-      @apply text-neutral-700;
-    }
-
-    &.active &__trigger > .menu-item__caret {
-      transform: rotate(180deg);
-    }
-
-    &.active &__dropdown {
-      @apply flex;
-      -webkit-animation: smoothFade 0.5s ease-out;
-      -moz-animation: smoothFade 0.5s ease-out;
-      -o-animation: smoothFade 0.5s ease-out;
-      animation: smoothFade 0.5s ease-out;
-
-    }
-
-    &.disabled &__trigger .menu-item__caret {
-      @include icon-svg(fill-neutral-50);
-    }
+  &.disabled &__trigger .menu-item__caret {
+    @include icon-svg(fill-neutral-50);
   }
-
 }

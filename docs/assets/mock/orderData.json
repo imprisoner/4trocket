@@ -1,0 +1,76 @@
+{
+  "order_id": "999",
+  "order": {
+    "status": "Поступил в ПВЗ",
+    "current_location": "ПВЗ #25 Белорусская",
+    "created_at": "07.03.2022 23:05",
+    "shipment_date": "08.03.2022 12:58",
+    "stock": "Зеленоград",
+    "delivery_service": "Пункт ПВЗ #Беллоруская",
+    "delivery_method": "Доставка до ПВЗ",
+    "track_number": "3577_1464",
+    "supposed_delivery_interval": "09.03.2022 - 10.03.2022",
+    "storage_till": "17.03.2022",
+    "payment_type": "Онлайн оплата",
+    "payment_status": "Оплачено",
+    "note": ""
+  },
+  "buyer": {
+    "name": "Константинопольский Константин",
+    "phone_number": "+7 987 654-32-10",
+    "delivery_address": "м. Белорусская, БЦ «Петровский» (При себе необходимо иметь паспорт для прохода на территорию)",
+    "comment": "Набрать за час"
+  },
+  "checkout": {
+    "positions": [
+      {
+        "name": "Новая Станция Мини - умная колонка Yandex с Алисой с часами (YNDX-00020B), синий YNDX-00020Blue",
+        "amount": 1,
+        "price": 8310,
+        "summary": 8310,
+        "volume": 0.019,
+        "weight": 0.42
+      },
+      {
+        "name": "Доставка",
+        "amount": 1,
+        "price": 0,
+        "summary": 0,
+        "volume": null,
+        "weight": null
+      },
+      {
+        "name": "Total",
+        "amount": null,
+        "price": null,
+        "summary": 8310,
+        "volume": 0.019,
+        "weight": 0.42
+      }
+    ]
+  },
+  "changes": {
+    "positions": [
+      {
+        "created_at": "08.03.2022 12:34",
+        "event": "Приняли в ПВЗ #25 Белорусская",
+        "created_by": "Сидоров Сидр Сидорович"
+      },
+      {
+        "created_at": "08.03.2022 07:59",
+        "event": "Отправили в ПВЗ #25 Белорусская",
+        "created_by": "Иванов Иван Иванович"
+      },
+      {
+        "created_at": "08.03.2022 07:59",
+        "event": "Приняли в ХАБ (Елино)",
+        "created_by": "Иванов Иван Иванович"
+      },
+      {
+        "created_at": "08.03.2022 06:41",
+        "event": "Выгрузили заказ",
+        "created_by": "Модуль API"
+      }
+    ]
+  }
+}

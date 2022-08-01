@@ -1,47 +1,45 @@
-@layer components {
-  .filters {
-    @apply flex items-end flex-wrap;
+.filters {
+  @apply flex items-end flex-wrap;
 
-    fieldset {
-      @apply flex flex-1 items-end gap-4;
+  fieldset {
+    @apply flex flex-1 items-end gap-4;
 
-      @media (max-width: 1439px) {
-        @apply w-full flex-initial max-w-full;
-      }
-
-      max-width: 1084px;
+    @media (max-width: 1439px) {
+      @apply w-full flex-initial max-w-full;
     }
 
-    &__submit {
-      @apply ml-8;
+    max-width: 1084px;
+  }
 
-      @media (max-width: 1439px) {
-        @apply ml-auto mt-4;
-      }
+  &__submit {
+    @apply ml-8;
 
-      .btn {
-        @apply shadow-1;
-      }
+    @media (max-width: 1439px) {
+      @apply ml-auto mt-4;
     }
 
-    &__block {
-      &:first-child {
-        width: 160px;
-      }
+    .btn {
+      @apply shadow-1;
+    }
+  }
 
-      &:not(:first-child) {
-        flex: 1 0 0;
-      }
+  &__block {
+    &:first-child {
+      width: 160px;
+    }
 
-      &:nth-child(2), &:nth-child(3) {
-        max-width: 180px;
-      }
+    &:not(:first-child) {
+      flex: 1 0 0;
+    }
 
-      @media (max-width: 1439px) {
-        @apply w-1/5;
-      }
+    &:nth-child(2), &:nth-child(3) {
+      max-width: 180px;
+    }
 
+    @media (max-width: 1439px) {
+      @apply w-1/5;
     }
 
   }
+
 }
