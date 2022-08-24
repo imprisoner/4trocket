@@ -2,15 +2,15 @@
   &.modal {
     @apply absolute;
   }
-  
-  & > .modal__dialog {
+
+  &>.modal__dialog {
     overflow: scroll;
     left: calc(50vw - 720px);
-    min-width: 1262px;
+    min-width: 1262px px;
     width: 100vw;
+    top: 0;
     max-width: 1440px;
-    top: 13%;
-    height: calc(100vh - 26%);
+    max-height: 100vh;
     @media (max-width: 1440px) {
       left: 0;
       top: 0;
